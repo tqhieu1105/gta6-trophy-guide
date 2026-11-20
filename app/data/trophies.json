@@ -1200,7 +1200,7 @@
           ]
         },
         {
-          "text": "After Coffee Break in Chapter 2, visit marked meditation spots as Jason and Lucia. Each lead’s session counts toward 18.",
+          "text": "Reunite Jason and Lucia after Coffee Break (Chapter 2). A joint meditation counts twice; the last spot requires both leads.",
           "sources": [
             "gtabase-list",
             "gtabase-missions",
@@ -1217,7 +1217,7 @@
       ],
       "hidden": false,
       "evidence": "precaution",
-      "availability": "Take the Chapter 1 invitation while it is available. Save before closing the chapter.",
+      "availability": "Balcony first in Chapter 1; explore with both leads after Coffee Break.",
       "target": 18,
       "unit": "meditations",
       "chapter": 1
@@ -2425,6 +2425,10 @@
     {
       "title": "Early 100% guides disagree on counters",
       "status": "USE THE IN-GAME CHECKLIST",
+      "comparison": [
+        ["100 Stick Ups", "IGN table", ["ign-100"]],
+        ["50 distinct Stick Ups", "GTABase checklist", ["gtabase-100"]]
+      ],
       "text": "IGN’s table gives 100 Stick Ups and $100,000 Marked Bills, while GTABase lists 50 distinct Stick Ups and $250,000 Marked Bills. IGN’s prose also says all optional missions; GTABase lists 100 Optional Tasks. Follow the game’s Progress screen. Dime on the Dollar itself explicitly requires $250,000.",
       "sources": [
         "ign-100",
@@ -2435,6 +2439,10 @@
     {
       "title": "Eighteen meditations for trophy; fifteen for 100%",
       "status": "DIFFERENT TARGETS",
+      "comparison": [
+        ["18 sessions", "Trophy", ["gtabase-list", "keen"]],
+        ["15 sessions", "100% stat", ["gtabase-100"]]
+      ],
       "text": "The official description says every spot. GTABase and KeenGamer report 18 meditation sessions for the trophy, while the 100% list needs 15. The balcony is time-limited but its necessity remains unconfirmed. Safest route: do it in Chapter 1 and retain a save.",
       "sources": [
         "exophase",

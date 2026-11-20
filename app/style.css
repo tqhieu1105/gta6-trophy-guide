@@ -144,6 +144,13 @@ progress::-webkit-progress-bar{background:#d8e4db}progress::-webkit-progress-val
 .trophy-open>.grade{justify-self:end;font-size:9px}
 .row-description{color:#454f48;font-size:11px;white-space:normal;overflow:visible}
 .row-meta{font-size:9px;min-height:0;line-height:1}
+.checklist-phase{
+  display:flex;align-items:center;justify-content:space-between;gap:6px;
+  margin:0;padding:4px 7px;background:#dae8e0;color:#1e4c3d;
+  border-block:1px solid #b6cfc2;font-size:11px;font-weight:700;letter-spacing:0
+}
+.checklist-phase span:last-child{font-size:10px}
+.earned-control.compact .check-box{align-self:start}
 .detail-title{letter-spacing:0;font:700 27px/1.06 var(--serif)}
 .detail-meta .grade,.detail-meta .tag,.detail-meta .risk-label{font-size:10px;letter-spacing:0}
 .detail-meta .risk-label,.trophy-row .risk-label{background:#ffe8c2;color:#704114}
@@ -216,7 +223,24 @@ progress::-webkit-progress-bar{background:#d8e4db}progress::-webkit-progress-val
   .source-table thead{position:sticky;top:0}
 }
 .completion-targets summary{padding:7px 0;color:#254d40;font-weight:700;cursor:pointer}
+.source-family{display:block;color:#244f40;font-size:13px}
+.rail-source>.source-link{line-height:1.2}
+.rail-source>.source-link:not(:first-child){display:block;margin:3px 0 0;font-size:11px}
+.stage-note{flex-basis:100%;font-size:10px;line-height:1.2;color:#536357}
+.stage-line{row-gap:3px}
+.grade-total{display:flex;align-items:baseline;justify-content:center;gap:4px;padding:3px 1px}
+.grade-total abbr{font-size:12px;text-decoration:none}
+.grade-total b{font-size:16px}
+@media(min-width:901px){
+  .availability{display:flex;align-items:baseline;gap:6px;padding:4px 6px}
+  .availability b{flex:none;white-space:nowrap;font-size:10px}
+  .availability p{margin:0;font-size:11px;line-height:1.25}
+  .rail-source{padding-top:4px;padding-bottom:4px}
+  .rail-source p{margin:1px 0;font-size:10px;line-height:1.15}
+}
 @media(min-width:901px) and (max-width:1130px){
+  body[data-view="tracker"].risk-in-detail .risk-banner{display:none}
+  body[data-view="tracker"].risk-in-detail .tracker-grid{height:calc(100vh - 137px)}
   .masthead,main{padding-left:14px;padding-right:14px}
   .tracker-grid{grid-template-columns:265px minmax(0,1fr) 170px;height:calc(100vh - 168px)}
   .guide-detail{padding:8px 10px}
@@ -230,6 +254,16 @@ progress::-webkit-progress-bar{background:#d8e4db}progress::-webkit-progress-val
   .official{margin:4px 0}
   .audit-strip #audit-coverage,.audit-strip #audit-steps{color:#234e3f;font-size:12px}
   .rail-source{padding:5px 0}
+  .checklist-score{padding:4px 8px 5px}
+  .score-label b{font-size:29px}
+  .grade-total{padding:2px 1px}
+  .trophy-row{min-height:39px;padding-top:4px;padding-bottom:4px}
+  .trophy-open{gap:1px 4px}
+  .trophy-open>strong{font-size:14px;letter-spacing:0}
+  .trophy-row:not(.selected) .row-meta{display:none}
+  .panel-heading{min-height:24px;height:24px}
+  .guide-detail .earned-control{font-size:12px;color:#254d40}
+  .guide-steps li::before{font-size:11px;color:white;background:#24634e}
 }
 @media(max-width:900px){
   .masthead{height:auto;grid-template-columns:1fr auto;gap:4px}
@@ -242,4 +276,101 @@ progress::-webkit-progress-bar{background:#d8e4db}progress::-webkit-progress-val
   .backup-controls>span{display:none}
   .filters-top{height:auto}
   .detail-title{font-size:25px}
+}
+
+#route-progress {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 5px;
+  margin: 3px 0 0;
+  padding: 0;
+  border: 0;
+}
+#route-progress .stage-line {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 3px 6px;
+  padding: 4px 7px;
+  background: #e5eee7;
+  border: 1px solid #b7ccc0;
+  color: #254c3c;
+  font-size: 12px;
+}
+#route-progress .stage-line:hover { background: #d0e5d8; }
+#route-progress .stage-meter {
+  grid-column: 1 / -1;
+  height: 4px;
+}
+.rail-source > .source-link {
+  font-size: 13px;
+  line-height: 1.25;
+}
+.rail-ledger {
+  margin-top: 10px;
+  padding: 6px 8px;
+  background: #e5eee7;
+  color: #254c3c;
+  border: 1px solid #b7ccc0;
+  text-align: left;
+  font-size: 12px;
+}
+.trophy-masked .trophy-open > strong { color: #495861; }
+.trophy-masked .row-description { color: #616d73; }
+.trophy-masked { background: #edf0f0; }
+.audit-strip { font-size: 11px; }
+.meditation-targets {
+  padding: 9px 0;
+  border-bottom: 1px solid #cddad1;
+}
+.meditation-targets h3 {
+  margin: 0 0 5px;
+  font-size: 13px;
+  color: #294b3e;
+}
+.meditation-target {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  align-items: baseline;
+  column-gap: 5px;
+  color: #294b3e;
+}
+.meditation-target b { font-size: 24px; line-height: 1.1; }
+.meditation-target span { font-size: 12px; }
+.meditation-target > .citations { grid-column: 2; }
+.meditation-target + .meditation-target { margin-top: 5px; }
+.dispute-comparison {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin: 8px 0;
+}
+.dispute-comparison > div {
+  display: grid;
+  align-content: start;
+  gap: 3px;
+  padding: 8px;
+  background: #e7efe9;
+  border-top: 2px solid #537f6b;
+  color: #24463a;
+}
+.dispute-comparison b { font-size: clamp(17px, 2vw, 26px); }
+.dispute-comparison span { font-size: 13px; }
+body[data-view="sources"] .disputes > h2 { font-size: 32px; }
+body[data-view="roadmap"] .phase-marker { font-size: 25px; }
+body[data-view="roadmap"] .phase h2 { font-size: 23px; }
+@media (min-width: 901px) and (max-width: 1130px) {
+  body[data-view="tracker"].risk-in-detail .tracker-grid {
+    height: calc(100vh - 184px);
+    grid-template-columns: 269px minmax(0, 1fr) 174px;
+  }
+  .guide-detail .detail-title { font-size: 29px; }
+  .guide-detail .official p { font-size: 16px; }
+  .trophy-open .row-description { font-size: 11.5px; }
+  .rail-source p { font-size: 11px; }
+  .guide-detail .guide-steps p { font-size: 14px; line-height: 1.27; }
+  .guide-detail .guide-steps li { padding-block: 4px; }
+  .guide-detail .availability { padding-block: 3px; }
+}
+@media (max-width: 760px) {
+  #route-progress { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }

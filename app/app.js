@@ -10,7 +10,15 @@ const data = await fetch('data/trophies.json').then((response) => {
 const trophies = data.trophies;
 const byId = new Map(trophies.map((t) => [t.id, t]));
 const sourceIndex = new Map(data.sources.map((s, i) => [s.id, { ...s, number: i + 1 }]));
-const sourceIds = new Set(sourceIndex.keys());
+const routePhases = [
+  { title: 'Chapters 1–2', chapters: [1, 2], note: 'Protect the balcony invitation' },
+  { title: 'Chapter 3', chapters: [3], note: 'Side strands & collections' },
+  { title: 'Chapter 4', chapters: [4], note: 'Vault route & shooting range' },
+  { title: 'Chapter 5', chapters: [5], note: 'Finish the story, keep saves' },
+  { title: 'Free roam & 100%', chapters: [0], note: 'Finish counts, then platinum' },
+];
+const routePosition = (trophy) => routePhases.findIndex((phase) => phase.chapters.includes(trophy.chapter));
+const routeOrder = (trophy) => trophy.id === 28 ? 3.5 : trophy.id;
 function el(tag, className, text) {
   const result = document.createElement(tag);
   if (className) result.className = className;
@@ -102,7 +110,9 @@ function stats() {
     const total = trophies.filter((t) => t.grade === rank);
     const earned = total.filter((t) => state.earned.has(t.name)).length;
     const item = el('span', `grade-total grade-${rank}`);
-    item.append(el('span', '', rank), el('b', '', `${earned}/${total.length}`));
+    const shortGrade = el('abbr', '', rank[0].toUpperCase());
+    shortGrade.title = rank;
+    item.append(shortGrade, el('b', '', `${earned}/${total.length}`));
     item.title = `${earned} of ${total.length} ${rank} trophies earned`;
     item.setAttribute('aria-label', item.title);
     return item;
@@ -176,16 +186,17 @@ function results() {
     if (!state.query) return true;
     if (masked(t)) return false;
     return `${t.name} ${t.description} ${t.guide} ${t.steps.map((s) => s.text).join(' ')}`.toLowerCase().includes(state.query);
-  });
+  }).sort((a, b) => routePosition(a) - routePosition(b) || a.chapter - b.chapter || routeOrder(a) - routeOrder(b));
 }
 function trophyRow(t) {
-  const row = el('article', `trophy-row ${t.id === state.focus ? 'selected' : ''} ${state.earned.has(t.name) ? 'earned' : ''}`);
+  const concealed = masked(t);
+  const row = el('article', `trophy-row ${t.id === state.focus ? 'selected' : ''} ${state.earned.has(t.name) ? 'earned' : ''} ${concealed ? 'trophy-masked' : ''}`);
   row.dataset.id = t.id;
   row.append(earnedControl(t, true));
   const text = button('', () => selectTrophy(t.id), 'trophy-open');
-  text.append(el('strong', '', masked(t) ? 'Hidden story trophy' : t.name));
+  text.append(el('strong', '', concealed ? 'Hidden story trophy' : t.name));
   text.append(grade(t));
-  text.append(el('span', 'row-description', masked(t) ? 'Official name and description protected.' : t.description));
+  text.append(el('span', 'row-description', concealed ? 'Official name and description protected.' : t.description));
   const meta = el('span', 'row-meta');
   if (t.missable === 'possible') meta.append(el('b', 'risk-label', 'POSSIBLE MISSABLE'));
   else if (!t.target || masked(t)) meta.append(el('span', '', masked(t) ? 'STORY' : t.stage));
@@ -193,6 +204,23 @@ function trophyRow(t) {
   text.append(meta);
   row.append(text);
   return row;
+}
+function renderRows(list, visible) {
+  const fragment = document.createDocumentFragment();
+  let lastPhase = -1;
+  for (const trophy of visible) {
+    const phase = routePosition(trophy);
+    if (phase !== lastPhase) {
+      const matches = visible.filter((item) => routePosition(item) === phase);
+      const earned = matches.filter((item) => state.earned.has(item.name)).length;
+      const band = el('h3', 'checklist-phase');
+      band.append(el('span', '', routePhases[phase].title), el('span', '', `${earned}/${matches.length} earned`));
+      fragment.append(band);
+      lastPhase = phase;
+    }
+    fragment.append(trophyRow(trophy));
+  }
+  list.replaceChildren(fragment);
 }
 function counterControl(t) {
   const counter = el('div', 'manual-counter');
@@ -244,7 +272,7 @@ function renderDetail(t) {
     return;
   }
   if (t.id === 28) {
-    detail.append(callout('18 for the trophy · 15 for 100%', 'The Chapter 1 balcony requirement remains unconfirmed.', ['gtabase-list','keen','gtabase-100'], 'dispute'));
+    detail.append(callout('Possible missable · Chapter 1', 'Save before Lucia’s invitation; a required session is unconfirmed.', ['gtabase-list','keen'], 'dispute'));
   } else if (t.evidence === 'unresolved') {
     detail.append(callout('UNCONFIRMED TRIGGER · DO NOT GRIND A GUESS', t.guide, ['gtabase-list','keen'], 'dispute'));
   } else detail.append(el('p', 'guide-summary', t.guide));
@@ -270,25 +298,15 @@ function renderDetail(t) {
     detail.append(more);
   }
 }
-function renderRail(t) {
-  const rail = $('#evidence-rail');
-  rail.replaceChildren();
-  const top = el('div', 'panel-heading');
-  top.append(el('b', '', 'Source Trail'), el('span', '', '20 Nov'));
-  rail.append(top);
-  const route = el('section', 'stage-progress');
-  route.append(el('h3', 'eyebrow', 'Platinum route progress'));
-  for (const [label, matches] of [
-    ['Chapters 1–2', (item) => [1,2].includes(item.chapter)],
-    ['Chapter 3', (item) => item.chapter === 3],
-    ['Chapter 4', (item) => item.chapter === 4],
-    ['Chapter 5', (item) => item.chapter === 5],
-    ['Free roam & 100%', (item) => item.chapter === 0]
-  ]) {
-    const members = trophies.filter(matches);
+function renderRouteProgress() {
+  const route = $('#route-progress');
+  route.replaceChildren();
+  for (const [index, { title: label, chapters, note }] of routePhases.entries()) {
+    const members = trophies.filter((item) => chapters.includes(item.chapter));
     const earned = members.filter((item) => state.earned.has(item.name)).length;
     const line = button('', () => setView('roadmap'), 'stage-line');
-    line.append(el('span', '', label), el('b', '', `${earned}/${members.length}`));
+    line.append(el('span', 'stage-name', label), el('b', '', `${earned}/${members.length}`));
+    line.title = `Phase ${index + 1} · ${note}`;
     const meter = el('progress', 'stage-meter');
     meter.max = members.length;
     meter.value = earned;
@@ -296,25 +314,63 @@ function renderRail(t) {
     line.append(meter);
     route.append(line);
   }
+}
+function renderRail(t) {
+  const rail = $('#evidence-rail');
+  rail.replaceChildren();
+  const top = el('div', 'panel-heading');
+  top.append(el('b', '', 'Guide sources'), el('span', '', '20 Nov'));
+  rail.append(top);
   if (masked(t)) {
-    rail.append(el('p', 'rail-note', 'Citations hidden with the trophy guide.'), route);
+    rail.append(el('p', 'rail-note', 'Citations hidden with the trophy guide.'));
     return;
   }
-  const linked = [...new Set(['exophase', ...t.steps.flatMap((s) => s.sources)])];
+  if (t.id === 28) {
+    const split = el('section', 'meditation-targets');
+    split.append(el('h3', '', 'Meditation targets'));
+    for (const [count, label, ids] of [
+      ['18', 'Trophy', ['gtabase-list', 'keen']],
+      ['15', '100% stat', ['gtabase-100']],
+    ]) {
+      const target = el('div', 'meditation-target');
+      target.append(el('b', '', count), el('span', '', label), cite(ids, true));
+      split.append(target);
+    }
+    rail.append(split);
+  }
+  const linked = [...new Set(['playstation', 'exophase', ...t.steps.flatMap((s) => s.sources)])];
+  const sourceGroups = new Map();
   for (const id of linked) {
-    const source = sourceIndex.get(id);
+    const name = sourceIndex.get(id).name;
+    if (!sourceGroups.has(name)) sourceGroups.set(name, []);
+    sourceGroups.get(name).push(id);
+  }
+  const pageLabels = { 'gtabase-list': 'Trophy guide', 'gtabase-missions': 'Mission order', 'gtabase-100': '100% targets' };
+  for (const [name, ids] of sourceGroups) {
     const card = el('div', 'rail-source');
-    card.append(sourceLink(id), el('p', '', source.role));
+    if (ids.length === 1) {
+      card.append(sourceLink(ids[0]), el('p', '', sourceIndex.get(ids[0]).role));
+    } else {
+      card.append(el('b', 'source-family', name));
+      for (const id of ids) {
+        const source = sourceIndex.get(id);
+        const link = sourceLink(id);
+        link.textContent = `[${String(source.number).padStart(2, '0')}] ${pageLabels[id] || source.role}`;
+        card.append(link);
+      }
+    }
     rail.append(card);
   }
-  rail.append(route);
+  const ledger = button('See all sources and disputes →', () => setView('sources'), 'rail-ledger');
+  rail.append(ledger);
 }
 function renderTracker() {
   const list = $('#trophy-list');
   const oldScroll = list.scrollTop;
   const visible = results();
   if (!visible.some((t) => t.id === state.focus)) state.focus = visible[0]?.id ?? null;
-  list.replaceChildren(...visible.map(trophyRow));
+  document.body.classList.toggle('risk-in-detail', state.focus === 28 && !masked(byId.get(28)));
+  renderRows(list, visible);
   list.scrollTop = oldScroll;
   $('#shown-count').textContent = `${visible.length} / ${trophies.length}`;
   if (state.focus) {
@@ -326,6 +382,7 @@ function renderTracker() {
   }
   $('#spoiler').checked = state.hideStory;
   stats();
+  renderRouteProgress();
 }
 function thresholdTable() {
   const table = el('table', 'thresholds');
@@ -415,9 +472,20 @@ function renderSources() {
   layout.append(ledger);
   const notes=el('section','disputes');
   notes.append(el('h2','','Notes & source disputes'));
-  for (const note of data.disputes) {
+  const featuredFirst = [...data.disputes].sort((a, b) => Number(Boolean(b.comparison)) - Number(Boolean(a.comparison)));
+  for (const note of featuredFirst) {
     const card=el('article','dispute-note');
-    card.append(el('p','eyebrow',note.status),el('h3','',note.title),el('p','',note.text),cite(note.sources));
+    card.append(el('p','eyebrow',note.status),el('h3','',note.title));
+    if (note.comparison) {
+      const split = el('div', 'dispute-comparison');
+      for (const [count, label, ids] of note.comparison) {
+        const side = el('div');
+        side.append(el('b', '', count), el('span', '', label), cite(ids, true));
+        split.append(side);
+      }
+      card.append(split);
+    }
+    card.append(el('p','',note.text),cite(note.sources));
     notes.append(card);
   }
   layout.append(notes);view.append(layout);
