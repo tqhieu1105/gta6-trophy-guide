@@ -3,23 +3,45 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GTA VI trophy checklist</title>
+<meta name="color-scheme" content="light">
+<meta name="description" content="Vice Atlas: all 55 GTA VI PS5 trophies, original cited guides, an honest missable audit and a private offline tracker.">
+<title>Vice Atlas — GTA VI Trophy Field Guide</title>
+<link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>GTA VI trophy checklist</h1>
-  <p id="progress">0 of 55 earned</p>
+<header class="masthead">
+  <a class="brand" href="?view=tracker" aria-label="Vice Atlas home"><span class="brand-stamp">VA</span><span>VICE <i>ATLAS</i><small>GTA VI · PS5 TROPHY FIELD GUIDE</small></span></a>
+  <nav aria-label="Guide views">
+    <button data-view="tracker">01 <span>Tracker</span></button>
+    <button data-view="roadmap">02 <span>Platinum route</span></button>
+    <button data-view="sources">03 <span>Source matrix</span></button>
+  </nav>
+  <div class="global-progress"><b id="earned-total">0 / 55</b><span id="earned-percent">0% earned</span><div><i id="earned-bar"></i></div></div>
 </header>
-<div class="controls">
-  <label>Grade <select id="grade"><option value="all">All</option><option value="platinum">Platinum</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option></select></label>
-  <button id="export" type="button">Export progress</button>
-  <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
-</div>
-<table>
-  <thead><tr><th>Earned</th><th>Trophy</th><th>Grade</th><th>How to get it</th></tr></thead>
-  <tbody id="rows"></tbody>
-</table>
+<main>
+  <section class="audit-strip" aria-label="Coverage audit"><strong>FIELD AUDIT</strong><span id="audit-coverage"></span><span>1P · 2G · 6S · 46B</span><span>28 PSN hidden</span><span id="audit-sources"></span><span id="audit-steps"></span><span>0 online</span></section>
+  <aside class="risk-banner"><span class="risk-icon">!</span><div><b>CHAPTER 1 PRECAUTION</b><span> Do Lucia’s balcony meditation when offered. Its trophy requirement is unconfirmed; retain a Chapter 1 save.</span></div><button id="show-risk">Read the evidence ↗</button></aside>
+  <section class="view" id="tracker-view">
+    <div class="tracker-heading"><div><p class="eyebrow">THE COMPLETE LEONIDA FIELD LOG</p><h1>Every trophy. <em>A way forward.</em></h1></div><div class="backup-controls"><span id="save-status">✓ Saved on this device</span><button id="export">↓ Export JSON</button><label class="import-control">↑ Import JSON<input id="import" type="file" accept=".json,application/json" aria-label="Import progress JSON"></label></div></div>
+    <div class="filters-top">
+      <label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search trophies, missions, places…" aria-label="Search trophies"><kbd>Ctrl K</kbd></label>
+      <label class="spoiler-control"><input id="spoiler" type="checkbox"><span class="switch"></span>Hide story spoilers until earned</label>
+      <select id="grade" aria-label="Filter grade"><option value="all">All grades</option><option>platinum</option><option>gold</option><option>silver</option><option>bronze</option></select>
+      <label class="remaining-control"><input id="remaining" type="checkbox"> Unearned only</label>
+    </div>
+    <div class="filters-bottom"><div id="kind-filters" aria-label="Filter trophy kind"></div><span id="shown-count">55 trophies shown</span></div>
+    <div class="tracker-grid">
+      <section class="checklist"><div class="panel-heading"><b>THE 55 · CHECKLIST</b><span>OFFICIAL PS5 LIST</span></div><div id="trophy-list" class="trophy-list"></div><div class="list-foot"><span>✓ Local checklist · no account</span><button id="clear">Clear progress</button></div></section>
+      <article id="guide-detail" class="guide-detail" aria-live="polite"></article>
+      <aside id="evidence-rail" class="evidence-rail" aria-label="Cited sources and next trophy"></aside>
+    </div>
+  </section>
+  <section class="view hidden" id="roadmap-view"></section>
+  <section class="view hidden" id="sources-view"></section>
+  <footer><b>VICE ATLAS</b><span>INDEPENDENT GUIDE · READ 20 NOV 2026 · YOUR PROGRESS NEVER LEAVES THIS DEVICE</span><span>LEONIDA / FIELD EDITION 01</span></footer>
+</main>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
 <script type="module" src="app.js"></script>
 </body>
 </html>
