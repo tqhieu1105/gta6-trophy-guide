@@ -1,15 +1,15 @@
 [
   {
     "file": "1-field-atlas.jpg",
-    "path": "/?view=tracker&focus=28&reveal=1",
+    "path": "/?view=tracker&reveal=1",
     "viewport": {
-      "width": 1280,
-      "height": 800
+      "width": 1024,
+      "height": 640
     }
   },
   {
     "file": "2-completion-guide.jpg",
-    "path": "/?view=tracker&focus=14",
+    "path": "/?view=tracker&focus=14&reveal=1",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -17,7 +17,7 @@
   },
   {
     "file": "3-platinum-route.jpg",
-    "path": "/?view=roadmap",
+    "path": "/?view=roadmap&reveal=1",
     "viewport": {
       "width": 1280,
       "height": 800

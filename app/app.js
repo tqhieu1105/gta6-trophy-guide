@@ -2,7 +2,7 @@ const PROGRESS_KEY = 'vice-atlas-progress-v2';
 const PREFS_KEY = 'vice-atlas-preferences-v2';
 const $ = (selector) => document.querySelector(selector);
 const params = new URLSearchParams(location.search);
-const state = { view: 'tracker', focus: 28, kind: 'all', grade: 'all', query: '', remaining: false, hideStory: true, revealRequested: params.get('reveal') === '1', earned: new Set(), counts: {} };
+const state = { view: 'tracker', focus: 28, kind: 'all', grade: 'all', query: '', remaining: false, hideStory: true, earned: new Set(), counts: {} };
 const data = await fetch('data/trophies.json').then((response) => {
   if (!response.ok) throw new Error('Cannot load local trophy data. Serve app/ as a static site.');
   return response.json();
@@ -29,7 +29,7 @@ function toast(text) {
   clearTimeout(toast.timer);
   toast.timer = setTimeout(() => $('#toast').classList.remove('visible'), 2400);
 }
-function masked(t) { return state.hideStory && !state.revealRequested && (t.kind === 'story' || t.hidden) && !state.earned.has(t.name); }
+function masked(t) { return state.hideStory && (t.kind === 'story' || t.hidden) && !state.earned.has(t.name); }
 function sourceLink(id, compact = false) {
   const source = sourceIndex.get(id);
   if (!source) return el('span', '', '');
@@ -47,16 +47,16 @@ function cite(ids, compact = false) {
   return result;
 }
 function grade(t) { return el('span', `grade grade-${t.grade}`, t.grade); }
-function safeCounters(input = {}) {
+function safeCounters(input) {
   const output = {};
   for (const t of trophies) {
-    const value = Number(input[t.id]);
+    const value = Number(input?.[t.id]);
     if (t.target && Number.isFinite(value) && value >= 0) output[t.id] = Math.min(t.target, Math.floor(value));
   }
   return output;
 }
 function importPayload(payload) {
-  const names = Array.isArray(payload) ? payload : payload.earned;
+  const names = Array.isArray(payload) ? payload : payload?.earned;
   if (!Array.isArray(names) || names.some((name) => typeof name !== 'string')) throw new Error('Expected an earned-trophy array.');
   const valid = new Set(trophies.map((t) => t.name));
   const unknown = names.filter((name) => !valid.has(name));
@@ -93,9 +93,21 @@ function save() {
 }
 function stats() {
   const count = state.earned.size;
-  $('#earned-total').textContent = `${count} / 55`;
-  $('#earned-percent').textContent = `${Math.round(count / 55 * 100)}% earned`;
-  $('#earned-bar').style.width = `${count / 55 * 100}%`;
+  const totalTrophies = trophies.length;
+  $('#earned-total').textContent = `${count} / ${totalTrophies}`;
+  $('#earned-percent').textContent = `${Math.round(100 * count / totalTrophies)}% earned`;
+  $('#earned-bar').max = totalTrophies;
+  $('#earned-bar').value = count;
+  const grades = ['platinum','gold','silver','bronze'].map((rank) => {
+    const total = trophies.filter((t) => t.grade === rank);
+    const earned = total.filter((t) => state.earned.has(t.name)).length;
+    const item = el('span', `grade-total grade-${rank}`);
+    item.append(el('span', '', rank), el('b', '', `${earned}/${total.length}`));
+    item.title = `${earned} of ${total.length} ${rank} trophies earned`;
+    item.setAttribute('aria-label', item.title);
+    return item;
+  });
+  $('#grade-progress').replaceChildren(...grades);
 }
 function selectTrophy(id, scroll = false) {
   state.focus = id;
@@ -103,7 +115,7 @@ function selectTrophy(id, scroll = false) {
   if (scroll) {
     const list = $('#trophy-list');
     const row = list.querySelector(`[data-id="${id}"]`);
-    if (row) list.scrollTop = Math.max(0, row.offsetTop - 32);
+    if (row) list.scrollTop = Math.max(0, row.getBoundingClientRect().top - list.getBoundingClientRect().top + list.scrollTop - 36);
   }
 }
 function earnedControl(t, compact = false) {
@@ -128,8 +140,8 @@ const kinds = [
   ['missable', 'Missable', (t) => t.missable === 'possible'],
   ['collectible', 'Collectibles', (t) => t.kind === 'collectible' || [23,35].includes(t.id)],
   ['activity', 'Activities', (t) => t.kind === 'activity' || t.id === 28],
-  ['stunts', 'Stunts', (t) => t.id === 15],
   ['races', 'Races', (t) => [18,19].includes(t.id)],
+    ['stunts', 'Stunts', (t) => t.id === 15],
   ['side', 'Side', (t) => t.kind === 'side'],
   ['misc', 'Crime & misc', (t) => t.kind === 'misc'],
   ['money', 'Money', (t) => [52,53,54].includes(t.id)],
@@ -139,7 +151,11 @@ const kinds = [
 function renderFilters() {
   const group = $('#kind-filters');
   group.replaceChildren();
-  for (const [id, label, matches] of kinds) {
+  const more = el('details', 'more-filters');
+  more.append(el('summary', '', 'More kinds'));
+  const options = el('div', 'extra-kinds');
+  more.append(options);
+  for (const [index, [id, label, matches]] of kinds.entries()) {
     const count = trophies.filter(matches).length;
     const control = button(id === 'all' ? label : `${label} ${count}`, () => {
       state.kind = id;
@@ -147,8 +163,10 @@ function renderFilters() {
       renderTracker();
     }, `filter ${state.kind === id ? 'active' : ''}`);
     control.setAttribute('aria-pressed', state.kind === id ? 'true' : 'false');
-    group.append(control);
+    (index < 5 ? group : options).append(control);
+    if (index >= 5 && id === state.kind) more.classList.add('has-selection');
   }
+  group.append(more);
 }
 function results() {
   const predicate = kinds.find(([id]) => id === state.kind)[2];
@@ -165,12 +183,12 @@ function trophyRow(t) {
   row.dataset.id = t.id;
   row.append(earnedControl(t, true));
   const text = button('', () => selectTrophy(t.id), 'trophy-open');
-  text.append(el('strong', '', masked(t) ? 'Story trophy · hidden until earned' : t.name));
+  text.append(el('strong', '', masked(t) ? 'Hidden story trophy' : t.name));
+  text.append(grade(t));
   text.append(el('span', 'row-description', masked(t) ? 'Official name and description protected.' : t.description));
   const meta = el('span', 'row-meta');
-  meta.append(grade(t));
   if (t.missable === 'possible') meta.append(el('b', 'risk-label', 'POSSIBLE MISSABLE'));
-  else meta.append(el('span', '', masked(t) ? 'STORY' : t.stage));
+  else if (!t.target || masked(t)) meta.append(el('span', '', masked(t) ? 'STORY' : t.stage));
   if (t.target && !masked(t)) meta.append(el('span', 'row-count', `${state.counts[t.id] || 0}/${t.target}`));
   text.append(meta);
   row.append(text);
@@ -201,8 +219,9 @@ function counterControl(t) {
 }
 function callout(title, text, ids, type = '') {
   const box = el('aside', `callout ${type}`);
-  box.append(el('b', '', title), el('p', '', text));
-  if (ids?.length) box.append(cite(ids));
+  const copy = el('p', '', text);
+  if (ids?.length) copy.append(document.createTextNode(' '), cite(ids, true));
+  box.append(el('b', '', title), copy);
   return box;
 }
 function renderDetail(t) {
@@ -225,14 +244,13 @@ function renderDetail(t) {
     return;
   }
   if (t.id === 28) {
-    detail.append(callout('POSSIBLY MISSABLE · CHAPTER 1 BALCONY', 'Do it before Chapter 1 ends. Both guides leave its necessity unconfirmed; the safe route is to accept it and retain a save.', ['gtabase-list','keen'], 'risk'));
-    detail.append(callout('18 FOR THE TROPHY ≠ 15 FOR 100%', 'Guides report 18 meditation sessions for this trophy; A Long Road only needs 15. The official description says every spot.', ['gtabase-list','keen','gtabase-100'], 'dispute'));
+    detail.append(callout('18 for the trophy · 15 for 100%', 'The Chapter 1 balcony requirement remains unconfirmed.', ['gtabase-list','keen','gtabase-100'], 'dispute'));
   } else if (t.evidence === 'unresolved') {
     detail.append(callout('UNCONFIRMED TRIGGER · DO NOT GRIND A GUESS', t.guide, ['gtabase-list','keen'], 'dispute'));
   } else detail.append(el('p', 'guide-summary', t.guide));
   if (t.target) detail.append(counterControl(t));
   const heading = el('div', 'section-heading');
-  heading.append(el('h3', 'eyebrow', 'HOW TO EARN IT · ORIGINAL GUIDE'), el('span', '', `${t.steps.length} STEPS · EVERY STEP CITED`));
+  heading.append(el('h3', 'eyebrow', 'How to earn it'), el('span', '', `${t.steps.length} cited steps`));
   detail.append(heading);
   const steps = el('ol', 'guide-steps');
   for (const step of t.steps) {
@@ -246,33 +264,50 @@ function renderDetail(t) {
   const availability = el('div', 'availability');
   availability.append(el('b', '', 'WHEN TO DO IT'), el('p', '', t.availability));
   detail.append(availability);
-  if (t.id === 14) detail.append(thresholdTable());
+  if (t.id === 14) {
+    const more = el('details', 'completion-targets');
+    more.append(el('summary', '', 'Compare trophy and 100% targets'), thresholdTable());
+    detail.append(more);
+  }
 }
 function renderRail(t) {
   const rail = $('#evidence-rail');
   rail.replaceChildren();
   const top = el('div', 'panel-heading');
-  top.append(el('b', '', 'SOURCE TRAIL'), el('span', '', 'READ 20 NOV'));
+  top.append(el('b', '', 'Source Trail'), el('span', '', '20 Nov'));
   rail.append(top);
+  const route = el('section', 'stage-progress');
+  route.append(el('h3', 'eyebrow', 'Platinum route progress'));
+  for (const [label, matches] of [
+    ['Chapters 1–2', (item) => [1,2].includes(item.chapter)],
+    ['Chapter 3', (item) => item.chapter === 3],
+    ['Chapter 4', (item) => item.chapter === 4],
+    ['Chapter 5', (item) => item.chapter === 5],
+    ['Free roam & 100%', (item) => item.chapter === 0]
+  ]) {
+    const members = trophies.filter(matches);
+    const earned = members.filter((item) => state.earned.has(item.name)).length;
+    const line = button('', () => setView('roadmap'), 'stage-line');
+    line.append(el('span', '', label), el('b', '', `${earned}/${members.length}`));
+    const meter = el('progress', 'stage-meter');
+    meter.max = members.length;
+    meter.value = earned;
+    meter.setAttribute('aria-label', label);
+    line.append(meter);
+    route.append(line);
+  }
   if (masked(t)) {
-    rail.append(el('p', 'rail-note', 'Story sources are held behind the same spoiler setting.'));
+    rail.append(el('p', 'rail-note', 'Citations hidden with the trophy guide.'), route);
     return;
   }
-  const linked = [...new Set([...t.steps.flatMap((s) => s.sources), 'exophase'])];
+  const linked = [...new Set(['exophase', ...t.steps.flatMap((s) => s.sources)])];
   for (const id of linked) {
     const source = sourceIndex.get(id);
     const card = el('div', 'rail-source');
-    card.append(sourceLink(id), el('p', '', source.title));
-    card.append(el('span', 'source-domain', new URL(source.url).hostname.replace('www.','')));
-    card.append(el('small', '', id === 'exophase' ? 'Official name · description · grade' : `Cited by ${source.guidesCiting}/55 trophy guides`));
+    card.append(sourceLink(id), el('p', '', source.role));
     rail.append(card);
   }
-  rail.append(callout('LIST CROSS-CHECK · 55/55', 'Every official name, description and grade agrees across Exophase and GTABase.', ['exophase','gtabase-list'], 'verified'));
-  const next = el('div', 'next-up');
-  next.append(el('h3', 'eyebrow', 'NEXT IN YOUR FIELD LOG'));
-  const upcoming = trophies.filter((item) => !state.earned.has(item.name) && item.id !== t.id).sort((a,b) => (a.id === 28 ? -1 : b.id === 28 ? 1 : (a.chapter || 7) - (b.chapter || 7)));
-  for (const item of upcoming.slice(0,3)) next.append(button(masked(item) ? 'Story milestone · hidden' : item.name, () => selectTrophy(item.id,true)));
-  rail.append(next);
+  rail.append(route);
 }
 function renderTracker() {
   const list = $('#trophy-list');
@@ -281,7 +316,7 @@ function renderTracker() {
   if (!visible.some((t) => t.id === state.focus)) state.focus = visible[0]?.id ?? null;
   list.replaceChildren(...visible.map(trophyRow));
   list.scrollTop = oldScroll;
-  $('#shown-count').textContent = `${visible.length} of 55 shown`;
+  $('#shown-count').textContent = `${visible.length} / ${trophies.length}`;
   if (state.focus) {
     renderDetail(byId.get(state.focus));
     renderRail(byId.get(state.focus));
@@ -304,7 +339,10 @@ function thresholdTable() {
   const body = el('tbody');
   for (const entry of data.thresholds) {
     const row = el('tr');
-    row.append(el('td','',entry.name), el('td','',entry.trophy), el('td','',entry.completion));
+    const label = el('th', '', entry.name);
+    label.scope = 'row';
+    label.append(document.createTextNode(' '), cite(entry.sources, true));
+    row.append(label, el('td','',entry.trophy), el('td','',entry.completion));
     body.append(row);
   }
   table.append(body);
@@ -317,15 +355,17 @@ function viewIntro(kicker, title, subtitle) {
 }
 function renderRoadmap() {
   const view = $('#roadmap-view');
-  view.replaceChildren(viewIntro('PLATINUM ROUTE · ONE PLAYTHROUGH · NO ONLINE TROPHIES', 'Leave nothing behind.', 'Story milestones first, steady counters along the way, then the in-game 100% checklist. Keep manual saves: the guide reports no mission replay.'));
+  view.replaceChildren(viewIntro('GTA VI · PlayStation 5', 'Platinum route', 'Five phases from Chapter 1 to 100%. Keep manual saves: the mission guide reports no mission replay.'));
   const layout = el('div','route-layout');
   const phases = el('div','phases');
   for (const phase of data.roadmap) {
     const card = el('article',`phase phase-${phase.stage}`);
     const marker = el('span','phase-marker',phase.stage);
     const copy = el('div');
-    copy.append(el('p','eyebrow',phase.window),el('h2','',phase.title));
+    const window = state.hideStory ? phase.window.split(' · ')[0] : phase.window;
+    copy.append(el('p','eyebrow',window),el('h2','',phase.title));
     for (const step of phase.steps) {
+      if (state.hideStory && step.storySpoiler) continue;
       const p=el('p','phase-copy',step.text);
       p.append(document.createTextNode(' '),cite(step.sources,true));
       copy.append(p);
@@ -337,26 +377,32 @@ function renderRoadmap() {
   const sidebar=el('aside','route-sidebar');
   const audit=el('section','route-audit');
   audit.id='missable-audit';
-  audit.append(el('p','eyebrow','MISSABLE AUDIT · 01 PRECAUTION'),el('h2','','Positive Mental Attitude'));
-  audit.append(el('p','','Chapter 1 balcony: accept Lucia’s meditation invitation after Down to Earth. Its disappearance is reported; its trophy requirement remains unconfirmed.'));
+  audit.append(el('p','eyebrow','Missable audit · 0 confirmed'),el('h2','','1 possible: balcony meditation'));
+  audit.append(el('p','',state.hideStory ? 'Accept the Chapter 1 invitation and keep a manual save. Sources report that the invitation disappears.' : 'Accept Lucia’s Chapter 1 balcony invitation after Down to Earth. Keep a save before the invitation disappears.'));
   audit.append(cite(['keen','gtabase-list']));
-  audit.append(el('b','audit-line','No other confirmed trophy lockout identified.'));
-  audit.append(el('p','','Chapter-limited optional jobs are a separate concern. The mission guide says missing these does not block trophies or 100%.'));
+  audit.append(el('b','audit-line','Trophy dependency unconfirmed'));
+  audit.append(el('p','','The mission guide separates chapter-limited side jobs from trophies and 100% completion.'));
   audit.append(cite(['gtabase-missions','gtabase-100']));
   sidebar.append(audit,thresholdTable());
-  sidebar.append(callout('KEEP THE TARGETS SEPARATE', 'The 100% screen appears after the story. Finish the eight qualifying Stranger strands separately; early sources disagree about whether their tasks contribute to 100%.', ['gtabase-100','gtabase-list'], 'dispute'));
+  sidebar.append(callout('Eight Stranger strands', 'Track these separately. Sources disagree on whether their tasks also count toward 100%.', ['gtabase-100','gtabase-list'], 'dispute'));
   layout.append(sidebar);
   view.append(layout);
 }
 function renderSources() {
   const view=$('#sources-view');
-  view.replaceChildren(viewIntro('SOURCE MATRIX · CHECKED 20 NOVEMBER 2026','A guide you can audit.', 'Primary trophy metadata is cross-checked against two lists. Guides are original prose; each numbered step names its evidence. Unresolved claims stay unresolved.'));
+  const checked = new Date(`${data.audit.lastChecked}T12:00:00Z`);
+  const checkedLabel = new Intl.DateTimeFormat('en-GB', {dateStyle:'long',timeZone:'UTC'}).format(checked);
+  view.replaceChildren(viewIntro(`Evidence checked ${checkedLabel}`,'Source matrix', 'Exophase and GTABase agree on the 55 official PlayStation names, descriptions and grades.'));
   const layout=el('div','sources-layout');
   const ledger=el('section','source-ledger');
   const table=el('table','source-table');
   const head=el('thead');
   const tr=el('tr');
-  for(const label of ['Source page','Evidence used','Guides','Steps'])tr.append(el('th','',label));
+  for(const label of ['Source page','Evidence used','Guides','Steps']) {
+    const cell = el('th', '', label);
+    cell.scope = 'col';
+    tr.append(cell);
+  }
   head.append(tr);table.append(head);
   const body=el('tbody');
   for(const source of data.sources) {
@@ -366,7 +412,6 @@ function renderSources() {
     body.append(row);
   }
   table.append(body);ledger.append(table);
-  ledger.append(callout('METADATA AGREES · 55/55', 'Exophase + GTABase agree on every official name, description and grade. PlayStation confirms PS5 and the release date; its game page is not used for unlock advice.', ['exophase','gtabase-list','playstation'], 'verified'));
   layout.append(ledger);
   const notes=el('section','disputes');
   notes.append(el('h2','','Notes & source disputes'));
@@ -381,16 +426,24 @@ function setView(view) {
   state.view=view;
   document.body.dataset.view=view;
   for(const name of ['tracker','roadmap','sources'])$('#'+name+'-view').classList.toggle('hidden',name!==view);
-  document.querySelectorAll('nav button').forEach((b)=>b.classList.toggle('active',b.dataset.view===view));
+  document.querySelectorAll('nav button').forEach((control) => {
+    const active = control.dataset.view === view;
+    control.classList.toggle('active', active);
+    if (active) control.setAttribute('aria-current', 'page');
+    else control.removeAttribute('aria-current');
+  });
   if(view==='roadmap')renderRoadmap();
   if(view==='sources')renderSources();
-  const url=new URL(location.href);url.searchParams.set('view',view);history.replaceState(null,'',url.pathname+url.search);
+  const url = new URL(location.href);
+  url.searchParams.set('view', view);
+  history.replaceState(null, '', url.pathname + url.search);
+  window.scrollTo(0, 0);
 }
 readProgress();
 if (params.get('reveal') === '1') state.hideStory = false;
 if(byId.has(Number(params.get('focus'))))state.focus=Number(params.get('focus'));
   if(kinds.some(([id])=>id===params.get('kind')))state.kind=params.get('kind');
-$('#audit-coverage').textContent='55/55 official trophies';
+$('#audit-coverage').textContent=`${trophies.length}/55 official trophies`;
 $('#audit-sources').textContent=`${data.sources.length} source pages`;
 $('#audit-steps').textContent=`${data.audit.guideSteps}/${data.audit.guideSteps} steps cited`;
 renderFilters();

@@ -1,5 +1,5 @@
 {
-  "title": "Vice Atlas · Leonida Field Guide",
+  "title": "Vice Atlas | GTA VI Trophy Guide",
   "game": "Grand Theft Auto VI",
   "platform": "PlayStation 5",
   "editionNote": "Community-source cross-check published November 18–19, 2026; trophy descriptions and grades reproduced as listed.",
@@ -31,8 +31,8 @@
       "role": "Independent PS5 list",
       "scope": "Second-source check of all 55 PlayStation names, descriptions and grades.",
       "readAt": "2026-11-20",
-      "guidesCiting": 5,
-      "stepsCiting": 5
+      "guidesCiting": 7,
+      "stepsCiting": 9
     },
     {
       "id": "gtabase-list",
@@ -43,7 +43,7 @@
       "scope": "Cross-check of the full trophy list; individual unlock tips and qualification notes.",
       "readAt": "2026-11-20",
       "guidesCiting": 54,
-      "stepsCiting": 179
+      "stepsCiting": 127
     },
     {
       "id": "gtabase-missions",
@@ -54,7 +54,7 @@
       "scope": "Five-chapter sequence, named story missions and chapter-limited optional jobs.",
       "readAt": "2026-11-20",
       "guidesCiting": 15,
-      "stepsCiting": 45
+      "stepsCiting": 25
     },
     {
       "id": "gtabase-100",
@@ -64,7 +64,7 @@
       "role": "Completion checklist",
       "scope": "In-game 100% categories, tracked totals and post-story cleanup requirements.",
       "readAt": "2026-11-20",
-      "guidesCiting": 11,
+      "guidesCiting": 14,
       "stepsCiting": 26
     },
     {
@@ -76,7 +76,7 @@
       "scope": "Character quests, availability, progression and the eight-strand trophy.",
       "readAt": "2026-11-20",
       "guidesCiting": 4,
-      "stepsCiting": 16
+      "stepsCiting": 10
     },
     {
       "id": "ign-story",
@@ -109,7 +109,7 @@
       "scope": "Wanted stars, recognition indicators, escaping pursuits and residual Heat.",
       "readAt": "2026-11-20",
       "guidesCiting": 4,
-      "stepsCiting": 4
+      "stepsCiting": 5
     },
     {
       "id": "ign-collections",
@@ -131,7 +131,7 @@
       "scope": "Independent guide consulted for Chapter 1 meditation steps and unresolved triggers.",
       "readAt": "2026-11-20",
       "guidesCiting": 6,
-      "stepsCiting": 10
+      "stepsCiting": 9
     },
     {
       "id": "ign-waink",
@@ -190,44 +190,33 @@
       ],
       "stage": "PLATINUM · ALL 54",
       "missable": "no",
-      "guide": "Complete the 54 other trophies first. This is the reward at the end of the checklist, not a separate activity to search for.",
+      "guide": "The platinum comes after the other 54 awards. Check PlayStation for any trophy you might have ticked here by mistake.",
       "steps": [
         {
-          "text": "Use the saved checklist to identify any remaining category.",
+          "text": "Use the grades and unearned filter to narrow down the awards still on your list.",
           "sources": [
+            "exophase",
             "gtabase-list"
           ]
         },
         {
-          "text": "Check the console trophy page too",
+          "text": "Compare the remaining rows against the PS5 trophy screen before planning another run.",
           "sources": [
+            "exophase",
             "gtabase-list"
           ]
         },
         {
-          "text": "the in-app counter follows your local ticks.",
+          "text": "The platinum unlocks with the last outstanding award; there is no extra mission.",
           "sources": [
+            "exophase",
             "gtabase-list"
           ]
-        },
-        {
-          "text": "After the final outstanding trophy unlocks, allow the platinum notification to register.",
-          "sources": [
-            "gtabase-list"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": false,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "chapter": 0
     },
     {
@@ -241,53 +230,26 @@
       ],
       "stage": "CHAPTER 01",
       "missable": "no",
-      "guide": "Finish the named opening mission. Follow Jason’s first marked story objective; no optional condition is attached to this bronze.",
+      "guide": "Start a new story and play the first marked mission through its ending.",
       "steps": [
         {
-          "text": "Start the story and complete the prologue.",
+          "text": "Play the opening sequence as Jason and follow the main marker into Gone Fishing.",
           "sources": [
             "gtabase-missions",
             "gtabase-list"
           ]
         },
         {
-          "text": "Continue into Gone Fishing when the mission appears.",
+          "text": "Finish Gone Fishing and check the trophy list once the mission ends. Optional jobs are separate.",
           "sources": [
             "gtabase-missions",
             "gtabase-list"
           ]
-        },
-        {
-          "text": "Complete the mission objectives through its ending to register the story trophy.",
-          "sources": [
-            "gtabase-missions",
-            "gtabase-list"
-          ]
-        },
-        {
-          "text": "Use the chapter-by-chapter list if an optional marker distracts from the opening story mission.",
-          "sources": [
-            "gtabase-missions"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-missions",
-          "name": "GTABase",
-          "title": "GTA 6 Story Missions Guide & Walkthrough",
-          "url": "https://www.gtabase.com/gta-6/missions/"
-        },
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": true,
       "evidence": "sourced",
-      "availability": "Automatic story milestone; no optional branch is specified.",
+      "availability": "Earned during the main story at the stated milestone.",
       "chapter": 1
     },
     {
@@ -301,53 +263,26 @@
       ],
       "stage": "CHAPTER 01",
       "missable": "no",
-      "guide": "Play through the close of Chapter 1 and advance into Chapter 2. Optional jobs are separate from the chapter trophy.",
+      "guide": "The Chapter 1 award arrives when the story moves forward after Discharge Time.",
       "steps": [
         {
-          "text": "Keep following the main story missions in Chapter 1.",
+          "text": "Before leaving Chapter 1, make a manual save and check the balcony precaution on the roadmap.",
           "sources": [
             "gtabase-missions",
             "gtabase-list"
           ]
         },
         {
-          "text": "Finish its last story mission, Discharge Time.",
+          "text": "Finish Discharge Time and continue into Chapter 2 before checking the PS5 trophy screen.",
           "sources": [
             "gtabase-missions",
             "gtabase-list"
           ]
-        },
-        {
-          "text": "Advance into the opening of Chapter 2 to trigger the chapter-complete award.",
-          "sources": [
-            "gtabase-missions",
-            "gtabase-list"
-          ]
-        },
-        {
-          "text": "The award triggers at the next chapter’s opening, so check the trophy screen after advancing.",
-          "sources": [
-            "gtabase-list"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-missions",
-          "name": "GTABase",
-          "title": "GTA 6 Story Missions Guide & Walkthrough",
-          "url": "https://www.gtabase.com/gta-6/missions/"
-        },
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": true,
       "evidence": "sourced",
-      "availability": "Automatic story milestone; no optional branch is specified.",
+      "availability": "Earned during the main story at the stated milestone.",
       "chapter": 1
     },
     {
@@ -361,53 +296,26 @@
       ],
       "stage": "CHAPTER 02",
       "missable": "no",
-      "guide": "Reach the end of Chapter 2 and let the story cross into Chapter 3. Nothing in the list identifies a branch choice for this trophy.",
+      "guide": "Finish the Chapter 2 main missions and play the handoff to Vice City.",
       "steps": [
         {
-          "text": "Continue the main missions in Paradise Lost.",
+          "text": "Follow the Paradise Lost chapter’s main markers through its closing mission.",
           "sources": [
             "gtabase-missions",
             "gtabase-list"
           ]
         },
         {
-          "text": "Finish the chapter and advance to Welcome to Vice City.",
+          "text": "Enter Chapter 3 through Welcome to Vice City and check that the bronze posted.",
           "sources": [
             "gtabase-missions",
             "gtabase-list"
           ]
-        },
-        {
-          "text": "Verify the bronze appears as Chapter 3 begins.",
-          "sources": [
-            "gtabase-missions",
-            "gtabase-list"
-          ]
-        },
-        {
-          "text": "The trophy guide places the award as Chapter 3 begins after Welcome to Vice City.",
-          "sources": [
-            "gtabase-list"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-missions",
-          "name": "GTABase",
-          "title": "GTA 6 Story Missions Guide & Walkthrough",
-          "url": "https://www.gtabase.com/gta-6/missions/"
-        },
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": true,
       "evidence": "sourced",
-      "availability": "Automatic story milestone; no optional branch is specified.",
+      "availability": "Earned during the main story at the stated milestone.",
       "chapter": 2
     },
     {
@@ -421,53 +329,26 @@
       ],
       "stage": "CHAPTER 03",
       "missable": "no",
-      "guide": "Complete Chapter 3 and begin Chapter 4. The story mission list gives the order; avoid confusing the label with a side activity.",
+      "guide": "Stay on the main story through the third chapter and let the next chapter begin.",
       "steps": [
         {
-          "text": "Follow the numbered main story missions through Chapter 3.",
+          "text": "Use the Chapter 3 mission order if the map is crowded with optional contacts.",
           "sources": [
             "gtabase-missions",
             "gtabase-list"
           ]
         },
         {
-          "text": "Finish the chapter’s closing mission.",
+          "text": "Finish the closing story mission, then continue into Chapter 4 to register the chapter award.",
           "sources": [
             "gtabase-missions",
             "gtabase-list"
           ]
-        },
-        {
-          "text": "Play the next chapter’s opening beats and confirm the trophy notification.",
-          "sources": [
-            "gtabase-missions",
-            "gtabase-list"
-          ]
-        },
-        {
-          "text": "The source treats this as a chapter transition, not a collectible or medal challenge.",
-          "sources": [
-            "gtabase-list"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-missions",
-          "name": "GTABase",
-          "title": "GTA 6 Story Missions Guide & Walkthrough",
-          "url": "https://www.gtabase.com/gta-6/missions/"
-        },
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": true,
       "evidence": "sourced",
-      "availability": "Automatic story milestone; no optional branch is specified.",
+      "availability": "Earned during the main story at the stated milestone.",
       "chapter": 3
     },
     {
@@ -481,53 +362,26 @@
       ],
       "stage": "CHAPTER 04",
       "missable": "no",
-      "guide": "Advance through Chapter 4’s close into the last chapter. Save an ordinary manual save as a general safeguard before major story transitions.",
+      "guide": "This award belongs to the Chapter 4 ending. The game’s final mission has its own trophy.",
       "steps": [
         {
-          "text": "Follow Chapter 4’s story line to its ending.",
+          "text": "Make a manual save before the end of Chapter 4 if you still want to revisit its optional jobs.",
           "sources": [
             "gtabase-missions",
             "gtabase-list"
           ]
         },
         {
-          "text": "Finish the closing chapter mission and continue.",
+          "text": "Play across the Chapter 4 to Chapter 5 transition and check the trophy list.",
           "sources": [
             "gtabase-missions",
             "gtabase-list"
           ]
-        },
-        {
-          "text": "Confirm the chapter trophy before starting optional cleanup.",
-          "sources": [
-            "gtabase-missions",
-            "gtabase-list"
-          ]
-        },
-        {
-          "text": "Keep this Chapter 4 milestone separate from the gold for the actual final story mission.",
-          "sources": [
-            "gtabase-list"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-missions",
-          "name": "GTABase",
-          "title": "GTA 6 Story Missions Guide & Walkthrough",
-          "url": "https://www.gtabase.com/gta-6/missions/"
-        },
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": true,
       "evidence": "sourced",
-      "availability": "Automatic story milestone; no optional branch is specified.",
+      "availability": "Earned during the main story at the stated milestone.",
       "chapter": 4
     },
     {
@@ -541,53 +395,26 @@
       ],
       "stage": "CHAPTER 05",
       "missable": "no",
-      "guide": "Complete the final story mission, The End of the Road. Free roam remains available afterwards, so this is not a whole-game point of no return.",
+      "guide": "The gold follows The End of the Road, the final mission of Chapter 5.",
       "steps": [
         {
-          "text": "Finish the Chapter 5 main-story sequence.",
+          "text": "Follow the final chapter’s main markers to The End of the Road and finish the mission.",
           "sources": [
             "gtabase-missions",
             "gtabase-list"
           ]
         },
         {
-          "text": "Start and complete The End of the Road.",
+          "text": "After the credits, use free roam for cleanup and open the new 100% Completion panel.",
           "sources": [
-            "gtabase-missions",
+            "gtabase-100",
             "gtabase-list"
           ]
-        },
-        {
-          "text": "Return to free roam, then finish any remaining side activities and collections.",
-          "sources": [
-            "gtabase-missions",
-            "gtabase-list"
-          ]
-        },
-        {
-          "text": "The cited roadmap says free roam continues after the credits for cleanup.",
-          "sources": [
-            "gtabase-list"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-missions",
-          "name": "GTABase",
-          "title": "GTA 6 Story Missions Guide & Walkthrough",
-          "url": "https://www.gtabase.com/gta-6/missions/"
-        },
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": true,
       "evidence": "sourced",
-      "availability": "Automatic story milestone; no optional branch is specified.",
+      "availability": "Earned during the main story at the stated milestone.",
       "chapter": 5
     },
     {
@@ -601,59 +428,27 @@
       ],
       "stage": "CHAPTER 02",
       "missable": "no",
-      "guide": "Complete Breakfast Run, a Chapter 2 story mission. Resume the main mission marker if you have been doing side jobs.",
+      "guide": "Follow the Chapter 2 motel sequence in Port Gellhorn until Breakfast Run appears.",
       "steps": [
         {
-          "text": "Follow the Chapter 2 story sequence in Port Gellhorn.",
+          "text": "Return to the main mission marker in Port Gellhorn when you are ready to leave side activities.",
           "sources": [
             "gtabase-missions",
+            "ign-story",
             "gtabase-list"
           ]
         },
         {
-          "text": "Select Breakfast Run when it becomes the active mission.",
+          "text": "Finish Breakfast Run through its ending and verify the bronze called Trust.",
           "sources": [
             "gtabase-missions",
             "gtabase-list"
           ]
-        },
-        {
-          "text": "Complete its objectives to earn the bronze.",
-          "sources": [
-            "gtabase-missions",
-            "gtabase-list"
-          ]
-        },
-        {
-          "text": "The mission reference places Breakfast Run in Chapter 2’s motel sequence.",
-          "sources": [
-            "ign-story"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-missions",
-          "name": "GTABase",
-          "title": "GTA 6 Story Missions Guide & Walkthrough",
-          "url": "https://www.gtabase.com/gta-6/missions/"
-        },
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
-        },
-        {
-          "id": "ign-story",
-          "name": "IGN",
-          "title": "GTA 6 Walkthrough",
-          "url": "https://www.ign.com/wikis/gta-6/Walkthrough"
         }
       ],
       "hidden": true,
       "evidence": "sourced",
-      "availability": "Automatic story milestone; no optional branch is specified.",
+      "availability": "Earned during the main story at the stated milestone.",
       "chapter": 2
     },
     {
@@ -667,53 +462,26 @@
       ],
       "stage": "CHAPTER 03",
       "missable": "no",
-      "guide": "Finish The Cartel Heist in Chapter 3. Its name is a story-mission prerequisite, not a request to rob every bank.",
+      "guide": "Follow Chapter 3 to The Cartel Heist. Ordinary bank jobs do not satisfy this story award.",
       "steps": [
         {
-          "text": "Continue the Chapter 3 story until The Cartel Heist is offered.",
+          "text": "Continue the Chapter 3 main missions until the heist is offered.",
           "sources": [
             "gtabase-missions",
             "gtabase-list"
           ]
         },
         {
-          "text": "Complete the heist mission objectives.",
+          "text": "Complete the heist’s marked objectives and wait for the wrap-up before checking the trophy list.",
           "sources": [
             "gtabase-missions",
             "gtabase-list"
           ]
-        },
-        {
-          "text": "Check the trophy list once its ending sequence has played.",
-          "sources": [
-            "gtabase-missions",
-            "gtabase-list"
-          ]
-        },
-        {
-          "text": "Continue through the heist mission chain, since an unrelated free-roam bank job is not the trigger.",
-          "sources": [
-            "gtabase-missions"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-missions",
-          "name": "GTABase",
-          "title": "GTA 6 Story Missions Guide & Walkthrough",
-          "url": "https://www.gtabase.com/gta-6/missions/"
-        },
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": true,
       "evidence": "sourced",
-      "availability": "Automatic story milestone; no optional branch is specified.",
+      "availability": "Earned during the main story at the stated milestone.",
       "chapter": 3
     },
     {
@@ -727,54 +495,26 @@
       ],
       "stage": "CHAPTER 04",
       "missable": "no",
-      "guide": "Complete Child’s Play in Chapter 4. The trophy’s official condition is the mission completion, without a stated medal or optional objective.",
+      "guide": "Look for Child’s Play on the Chapter 4 story route.",
       "steps": [
         {
-          "text": "Progress through Chapter 4’s main story.",
+          "text": "Keep advancing the main objectives until Child’s Play becomes active.",
           "sources": [
             "gtabase-missions",
             "gtabase-list"
           ]
         },
         {
-          "text": "Start Child’s Play when it appears.",
+          "text": "Finish the mission. The official trophy lists completion and gives no medal requirement.",
           "sources": [
-            "gtabase-missions",
+            "exophase",
             "gtabase-list"
           ]
-        },
-        {
-          "text": "Finish the mission and let its completion register.",
-          "sources": [
-            "gtabase-missions",
-            "gtabase-list"
-          ]
-        },
-        {
-          "text": "The listed mission has no gold-medal objective, completing it is the stated condition.",
-          "sources": [
-            "gtabase-missions",
-            "gtabase-list"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-missions",
-          "name": "GTABase",
-          "title": "GTA 6 Story Missions Guide & Walkthrough",
-          "url": "https://www.gtabase.com/gta-6/missions/"
-        },
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": true,
       "evidence": "sourced",
-      "availability": "Automatic story milestone; no optional branch is specified.",
+      "availability": "Earned during the main story at the stated milestone.",
       "chapter": 4
     },
     {
@@ -788,53 +528,26 @@
       ],
       "stage": "CHAPTER 04",
       "missable": "no",
-      "guide": "Complete Headliners during Chapter 4. Do not skip the main mission marker in favor of the optional jobs around it.",
+      "guide": "Use the Chapter 4 story marker for Headliners rather than a side appearance by Dimez.",
       "steps": [
         {
-          "text": "Advance the Chapter 4 story to Headliners.",
+          "text": "Advance the Chapter 4 main sequence until Headliners opens.",
           "sources": [
             "gtabase-missions",
             "gtabase-list"
           ]
         },
         {
-          "text": "Complete the mission objectives with Jason and Lucia.",
+          "text": "Play the mission through to its closing objectives and look for the bronze when it ends.",
           "sources": [
             "gtabase-missions",
             "gtabase-list"
           ]
-        },
-        {
-          "text": "Confirm the bronze before continuing the main sequence.",
-          "sources": [
-            "gtabase-missions",
-            "gtabase-list"
-          ]
-        },
-        {
-          "text": "Follow the main mission marker rather than a similarly themed optional Dimez appearance.",
-          "sources": [
-            "gtabase-missions"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-missions",
-          "name": "GTABase",
-          "title": "GTA 6 Story Missions Guide & Walkthrough",
-          "url": "https://www.gtabase.com/gta-6/missions/"
-        },
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": true,
       "evidence": "sourced",
-      "availability": "Automatic story milestone; no optional branch is specified.",
+      "availability": "Earned during the main story at the stated milestone.",
       "chapter": 4
     },
     {
@@ -848,54 +561,26 @@
       ],
       "stage": "CHAPTER 04",
       "missable": "no",
-      "guide": "Complete the VCIA Takedown mission in Chapter 4. The mission name is the full listed condition.",
+      "guide": "Complete the airport mission in Chapter 4. The separate VCIA free roam trophy uses a different route.",
       "steps": [
         {
-          "text": "Follow Chapter 4’s main mission sequence to the airport job.",
+          "text": "Follow the Chapter 4 story to VCIA Takedown, the airport job.",
           "sources": [
             "gtabase-missions",
             "gtabase-list"
           ]
         },
         {
-          "text": "Finish VCIA Takedown.",
+          "text": "Finish the story job and check the PS5 awards after the mission wraps.",
           "sources": [
             "gtabase-missions",
             "gtabase-list"
           ]
-        },
-        {
-          "text": "Check the console tracker after the mission wrap-up.",
-          "sources": [
-            "gtabase-missions",
-            "gtabase-list"
-          ]
-        },
-        {
-          "text": "The airport story heist and the separate airport free-roam theft are distinct trophy routes.",
-          "sources": [
-            "gtabase-missions",
-            "gtabase-list"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-missions",
-          "name": "GTABase",
-          "title": "GTA 6 Story Missions Guide & Walkthrough",
-          "url": "https://www.gtabase.com/gta-6/missions/"
-        },
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": true,
       "evidence": "sourced",
-      "availability": "Automatic story milestone; no optional branch is specified.",
+      "availability": "Earned during the main story at the stated milestone.",
       "chapter": 4
     },
     {
@@ -909,53 +594,26 @@
       ],
       "stage": "CHAPTER 05",
       "missable": "no",
-      "guide": "Complete Operation Savage Glory in Chapter 5. It arrives in the final story chapter; no optional completion counter is specified.",
+      "guide": "Operation Savage Glory opens during Chapter 5 and triggers Snow Storm at completion.",
       "steps": [
         {
-          "text": "Start Chapter 5 after Chapter 4 closes.",
+          "text": "Continue the main story after the Chapter 4 airport sequence.",
           "sources": [
             "gtabase-missions",
             "gtabase-list"
           ]
         },
         {
-          "text": "Continue to Operation Savage Glory.",
+          "text": "Complete Operation Savage Glory once it is available and confirm the award in the PS5 list.",
           "sources": [
             "gtabase-missions",
             "gtabase-list"
           ]
-        },
-        {
-          "text": "Complete the mission and verify the bronze unlock.",
-          "sources": [
-            "gtabase-missions",
-            "gtabase-list"
-          ]
-        },
-        {
-          "text": "This main-story mission comes after the Chapter 4 airport sequence.",
-          "sources": [
-            "gtabase-missions"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-missions",
-          "name": "GTABase",
-          "title": "GTA 6 Story Missions Guide & Walkthrough",
-          "url": "https://www.gtabase.com/gta-6/missions/"
-        },
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": true,
       "evidence": "sourced",
-      "availability": "Automatic story milestone; no optional branch is specified.",
+      "availability": "Earned during the main story at the stated milestone.",
       "chapter": 5
     },
     {
@@ -969,37 +627,37 @@
       ],
       "stage": "POST-STORY · 100%",
       "missable": "no",
-      "guide": "Reach the game’s weighted 100% checklist. The trophy targets below often exceed individual trophy thresholds; the in-game checklist is the final authority when early guides conflict.",
+      "guide": "After the story, clear the weighted 100% checklist. Some trophy counters stop earlier than their completion targets.",
       "steps": [
         {
-          "text": "Complete the story. Progress → Stats → 100% Completion then appears, with earlier activity already credited.",
+          "text": "Open Progress → Stats → 100% Completion after the story. Your earlier work carries over.",
           "sources": [
             "gtabase-100",
             "ign-100"
           ]
         },
         {
-          "text": "Clear the full robbery requirements: 39 gang operations, 22 bank jobs, 7 payday loans and all 8 vaults. Take every key valuable at operations.",
+          "text": "Clear 39 gang operations, 22 bank jobs, seven payday loans and all eight vaults. Collect the key valuables at each operation.",
           "sources": [
             "gtabase-100"
           ]
         },
         {
-          "text": "Finish all 42 range golds, 42 drone time trials, 33 underwater discoveries and 15 Bret Target Decks. These full sets cannot be replaced by other activities.",
+          "text": "Finish 42 range golds, 42 drone trials, 33 underwater discoveries and 15 Bret Target Decks.",
           "sources": [
             "gtabase-100",
             "ign-100"
           ]
         },
         {
-          "text": "Meet the partial targets too: 300 stunts, 70 challenges, 15 card sets, 15 meditations, 100 WAiNK locations and 200 vehicle models. Use the full completion table below.",
+          "text": "Aim for 300 stunts, 70 challenges, 15 card sets, 15 meditations, 100 WAiNK locations and 200 vehicle models.",
           "sources": [
             "gtabase-100",
             "ign-100"
           ]
         },
         {
-          "text": "Use the in-game counter for disputed Optional Tasks, Stick Ups and Marked Bills targets. Finish the eight-strand Stranger trophy separately; 100% alone does not guarantee the platinum.",
+          "text": "Check the in-game targets for Optional Tasks, Stick Ups and Marked Bills. Track eight qualifying Stranger strands separately for the platinum.",
           "sources": [
             "gtabase-100",
             "ign-100",
@@ -1007,29 +665,9 @@
           ]
         }
       ],
-      "citations": [
-        {
-          "id": "gtabase-100",
-          "name": "GTABase",
-          "title": "GTA 6 100% Completion Guide & Checklist",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-100-completion-guide-interactive-checklist"
-        },
-        {
-          "id": "ign-100",
-          "name": "IGN",
-          "title": "GTA 6 100 Percent Guide",
-          "url": "https://www.ign.com/wikis/gta-6/GTA_6_100_Percent_Guide"
-        },
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
-        }
-      ],
       "hidden": false,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "target": 100,
       "unit": "completion %",
       "chapter": 0
@@ -1045,54 +683,33 @@
       ],
       "stage": "FREE ROAM",
       "missable": "no",
-      "guide": "The trophy asks for 250 stunts. The 100% checklist asks for 300, so keep tracking after this silver unlocks.",
+      "guide": "Use the stunt map for variety. The silver needs 250 completions; 100% needs 300.",
       "steps": [
         {
-          "text": "Use the map’s Stunt Spots and the Progress activity counter.",
+          "text": "Open the Stunt Spots map and choose nearby entries you have not completed.",
           "sources": [
-            "gtabase-100",
-            "gtabase-list"
+            "gtabase-list",
+            "gtabase-100"
           ]
         },
         {
-          "text": "Mix stunt jumps, under-bridge flights, knife flights and base jumps.",
+          "text": "Mix jumps, under-bridge flights, knife flights and base jumps to fill the counter.",
           "sources": [
-            "gtabase-100",
-            "gtabase-list"
+            "gtabase-list",
+            "gtabase-100"
           ]
         },
         {
-          "text": "Continue until the trophy counter reaches 250",
+          "text": "Watch the Progress counter after each batch. Tick the silver at 250 and keep going to 300 for 100%.",
           "sources": [
-            "gtabase-100",
-            "gtabase-list"
+            "gtabase-list",
+            "gtabase-100"
           ]
-        },
-        {
-          "text": "keep going to 300 for A Long Road.",
-          "sources": [
-            "gtabase-100",
-            "gtabase-list"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-100",
-          "name": "GTABase",
-          "title": "GTA 6 100% Completion Guide & Checklist",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-100-completion-guide-interactive-checklist"
-        },
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": false,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "target": 250,
       "unit": "stunts",
       "chapter": 0
@@ -1108,44 +725,30 @@
       ],
       "stage": "FREE ROAM",
       "missable": "no",
-      "guide": "Try one of each of the nine tracked activity types. The variety requirement is broader than finishing a single hobby.",
+      "guide": "Sample all nine activity types once. Check which types are missing before traveling to another area.",
       "steps": [
         {
-          "text": "Visit Progress → Activities and note the types you have tried.",
+          "text": "Open Progress → Activities and note your missing categories.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Sample fishing, hunting, golf, shooting, pool, basketball, arcade play, a race and a stunt.",
+          "text": "Try fishing, hunting, golf, range shooting, pool, basketball, arcade play, a race and a stunt.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Recheck the activity panel for a missing type before leaving the area.",
+          "text": "Return to the activity panel after each batch. A race win covers only the racing slot.",
           "sources": [
             "gtabase-list"
           ]
-        },
-        {
-          "text": "A race win can fill the racing sample, but it does not replace the other eight activity types.",
-          "sources": [
-            "gtabase-list"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": false,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "target": 9,
       "unit": "activity types",
       "chapter": 0
@@ -1161,51 +764,31 @@
       ],
       "stage": "FREE ROAM",
       "missable": "no",
-      "guide": "Earn 42 gold medals across 12 Shooting Ranges. This complete activity set also satisfies its 100% category.",
+      "guide": "Gold every Shooting Range challenge. The same set counts toward 100%.",
       "steps": [
         {
-          "text": "Find a Shooting Range through the activity map and start a challenge. Check the displayed gold score before firing.",
+          "text": "Pick a Shooting Range on the activity map and read each displayed gold target before starting.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Work through every challenge at the current range, improving accuracy and speed until each medal is gold.",
+          "text": "Repeat challenges at the current range until every result is gold, then move to the next venue.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Move between ranges until you have all 42 golds across the 12 locations. Check the range counter for gaps.",
-          "sources": [
-            "gtabase-list"
-          ]
-        },
-        {
-          "text": "Range practice also improves Focus, making Gunslinger easier. These same 42 golds are required for A Long Road.",
+          "text": "Check off all 42 golds across 12 ranges. The practice also helps build Combat Focus for Gunslinger.",
           "sources": [
             "gtabase-list",
             "gtabase-100"
           ]
         }
       ],
-      "citations": [
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
-        },
-        {
-          "id": "gtabase-100",
-          "name": "GTABase",
-          "title": "GTA 6 100% Completion Guide & Checklist",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-100-completion-guide-interactive-checklist"
-        }
-      ],
       "hidden": false,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "target": 42,
       "unit": "gold medals",
       "chapter": 0
@@ -1221,45 +804,31 @@
       ],
       "stage": "FREE ROAM",
       "missable": "no",
-      "guide": "Win a Top Fun Drone Race at all 14 locations. One win per venue earns this trophy; all 42 trials are needed for 100%.",
+      "guide": "Win at each of the 14 Top Fun venues. Work through three trials per venue if you also want 100%.",
       "steps": [
         {
-          "text": "Use the activity map to locate a Top Fun Drone Race venue. Win its event before moving on.",
+          "text": "Use the activity map to find a Top Fun Drone Race and register a win there.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Repeat at each of the 14 distinct locations. Repeating one venue does not replace a missing location.",
+          "text": "Move to a different venue after a win. A repeat at the same location cannot fill an empty slot.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "If planning the platinum, complete all three trials at each location now: the 100% list requires 42 completions.",
+          "text": "Track 14 distinct venue wins for the trophy and 42 trial completions for the 100% checklist.",
           "sources": [
             "gtabase-list",
             "gtabase-100"
           ]
         }
       ],
-      "citations": [
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
-        },
-        {
-          "id": "gtabase-100",
-          "name": "GTABase",
-          "title": "GTA 6 100% Completion Guide & Checklist",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-100-completion-guide-interactive-checklist"
-        }
-      ],
       "hidden": false,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "target": 14,
       "unit": "race locations",
       "chapter": 0
@@ -1275,44 +844,30 @@
       ],
       "stage": "FREE ROAM",
       "missable": "no",
-      "guide": "Win 20 different races; repeating one course does not fill a different-race slot. There are enough distinct options to choose a comfortable mix.",
+      "guide": "Win 20 distinct race events. Save repeat runs for practice instead of counting them toward the trophy.",
       "steps": [
         {
-          "text": "Open the race markers and select an event you have not won.",
+          "text": "Choose an event from a race marker and finish in first place.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Finish first, then select a different race rather than replaying the same one.",
+          "text": "After a win, pick a course you have not won and repeat until the unique-win count reaches 20.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Repeat until the tracked different-race wins reach 20.",
+          "text": "Continue toward 30 of 40 different wins if you are also working on 100%.",
           "sources": [
-            "gtabase-list"
+            "gtabase-100"
           ]
-        },
-        {
-          "text": "Choose a new course each time, a repeat win does not count as a distinct race.",
-          "sources": [
-            "gtabase-list"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": false,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "target": 20,
       "unit": "race wins",
       "chapter": 0
@@ -1329,44 +884,24 @@
       ],
       "stage": "CHAPTER 01",
       "missable": "no",
-      "guide": "After the early Cal story introduction, follow his fishing-quest messages and win his challenge. This specific win is different from simply trying fishing once.",
+      "guide": "Follow Cal’s invitation after the introduction in Feng Shui. Win the challenge he offers.",
       "steps": [
         {
-          "text": "Complete the Feng Shui mission to meet Cal’s fishing thread.",
+          "text": "Play Feng Shui and watch for Cal’s follow-up when the mission ends.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Respond to his follow-up and travel to its marked fishing spot.",
+          "text": "Go to the marked fishing spot and beat Cal in his challenge. An ordinary fishing session will not trigger this trophy.",
           "sources": [
             "gtabase-list"
           ]
-        },
-        {
-          "text": "Win Cal’s challenge and check the trophy notification.",
-          "sources": [
-            "gtabase-list"
-          ]
-        },
-        {
-          "text": "Cal’s challenge is a follow-up quest, not simply any session spent fishing.",
-          "sources": [
-            "gtabase-list"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": false,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "chapter": 1
     },
     {
@@ -1380,44 +915,24 @@
       ],
       "stage": "FREE ROAM",
       "missable": "no",
-      "guide": "Finish one arcade game. Use the home TV games or an arcade cabinet and reach the game’s end state.",
+      "guide": "Play an arcade game all the way through. A cabinet or one of the home TV games can get you started.",
       "steps": [
         {
-          "text": "Start any available arcade game from the TV or a cabinet.",
+          "text": "Choose an available game from a TV or arcade cabinet.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Play through its complete round rather than only opening the machine.",
+          "text": "Play until the game records an ending before you leave the activity.",
           "sources": [
             "gtabase-list"
           ]
-        },
-        {
-          "text": "Confirm the game registers as completed before switching activities.",
-          "sources": [
-            "gtabase-list"
-          ]
-        },
-        {
-          "text": "The guide lists three home TV games and a cabinet game as available starting points.",
-          "sources": [
-            "gtabase-list"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": false,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "chapter": 0
     },
     {
@@ -1431,38 +946,30 @@
       ],
       "stage": "CHAPTER 03",
       "missable": "no",
-      "guide": "Follow Andy’s five-mission Cellerica strand as Lucia. His Chapter 3 message provides the starting address in Belville.",
+      "guide": "Lucia starts Andy’s five-job strand in Belville once his Chapter 3 message arrives.",
       "steps": [
         {
-          "text": "Switch to Lucia after Chapter 3 begins and follow Andy’s text to Belville.",
+          "text": "Switch to Lucia in Chapter 3 and follow Andy’s text to Belville.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Complete Climbing the Cellerichain, Pay the Cellerica Fee and Peach! as the follow-ups appear.",
+          "text": "Work through Climbing the Cellerichain, Pay the Cellerica Fee and Peach! in the order offered.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Finish Read the Label, then Puff Puff Pass for the trophy. This strand remains available after the story.",
+          "text": "Complete Read the Label and then Puff Puff Pass. You can return to the strand after the story.",
           "sources": [
             "gtabase-list"
           ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": true,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "target": 5,
       "unit": "Andy missions",
       "chapter": 3
@@ -1478,51 +985,31 @@
       ],
       "stage": "CHAPTER 01",
       "missable": "no",
-      "guide": "Finish Kenton’s seven-wreck treasure chain. His temporary absence after Chapter 1 is a delay, not a proven trophy lockout.",
+      "guide": "Follow Kenton’s shipwreck assignments through the seventh treasure. If his marker disappears, let the story advance.",
       "steps": [
         {
-          "text": "Meet Kenton at the green KR icon in Key Lento after his Chapter 1 introduction.",
+          "text": "Meet Kenton at the green KR marker in Key Lento after his introduction.",
           "sources": [
             "gtabase-list",
             "gtabase-missions"
           ]
         },
         {
-          "text": "Visit the purple chest markers, dive at the shipwrecks and use the metal detector to recover the treasure.",
+          "text": "At the purple chest markers, dive and use the detector to recover the wreck treasures.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Track Progress → Collections → Kenton’s Treasures. Work through all seven wreck assignments.",
+          "text": "Check the Kenton’s Treasures collection for missing assignments. Wait for his later text to Jason if the strand pauses.",
           "sources": [
             "gtabase-list"
           ]
-        },
-        {
-          "text": "If he disappears after Chapter 1, continue the story and watch for his later text to Jason. Finish the final assignment when he returns.",
-          "sources": [
-            "gtabase-list"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
-        },
-        {
-          "id": "gtabase-missions",
-          "name": "GTABase",
-          "title": "GTA 6 Story Missions Guide & Walkthrough",
-          "url": "https://www.gtabase.com/gta-6/missions/"
         }
       ],
       "hidden": true,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "target": 7,
       "unit": "wreck assignments",
       "chapter": 1
@@ -1538,53 +1025,26 @@
       ],
       "stage": "CHAPTER 02",
       "missable": "no",
-      "guide": "Complete Billy’s final dirt-bike strand mission. The series follows the early Thrillbilly introduction but remains side content.",
+      "guide": "Billy’s Thrillbilly Mud Club strand ends with Hometown Heroes, the fifth job.",
       "steps": [
         {
-          "text": "Meet Billy at the Thrillbilly Mud Club after his Chapter 2 strand opens.",
+          "text": "Meet Billy at the club when his Chapter 2 strand becomes available.",
           "sources": [
             "gtabase-strangers",
             "gtabase-list"
           ]
         },
         {
-          "text": "Accept follow-up jobs as they appear and work through the series.",
+          "text": "Take his follow-up missions as they arrive and finish Hometown Heroes to claim the award.",
           "sources": [
             "gtabase-strangers",
             "gtabase-list"
           ]
-        },
-        {
-          "text": "Finish Hometown Heroes and check the trophy list.",
-          "sources": [
-            "gtabase-strangers",
-            "gtabase-list"
-          ]
-        },
-        {
-          "text": "The strand guide identifies Hometown Heroes as Billy’s fifth job.",
-          "sources": [
-            "gtabase-strangers"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-strangers",
-          "name": "GTABase",
-          "title": "GTA 6 Strangers & Freaks Missions",
-          "url": "https://www.gtabase.com/gta-6/strangers-missions/"
-        },
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": true,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "target": 5,
       "unit": "Billy missions",
       "chapter": 2
@@ -1600,53 +1060,33 @@
       ],
       "stage": "FREE ROAM",
       "missable": "no",
-      "guide": "Finish eight qualifying stranger strands. The full qualifying roster is still unresolved; not every character with a personal trophy advances this counter.",
+      "guide": "Count completed strands in the trophy tracker. A personal trophy for a character does not prove their strand qualifies.",
       "steps": [
         {
-          "text": "Start with the confirmed qualifying strands: Kirk, Kyle, Yago and Pilot Pete. Complete each chain through its final mission.",
+          "text": "Start with the four reported qualifying contacts: Kirk, Kyle, Yago and Pilot Pete. Play each chain to its finale.",
           "sources": [
-            "gtabase-list",
-            "gtabase-strangers"
+            "gtabase-strangers",
+            "gtabase-list"
           ]
         },
         {
-          "text": "Check the PS5 trophy’s counter before and after a finale. Do not assume Andy, Billy, Tyrone, Yasmani or Eddie advances it.",
+          "text": "Compare the PS5 counter before and after each finale; allow in-game days for texts and later chapters to open.",
           "sources": [
-            "gtabase-list",
-            "gtabase-strangers"
+            "gtabase-strangers",
+            "gtabase-list"
           ]
         },
         {
-          "text": "Allow time for follow-up texts and later-chapter contacts; strand missions can take several in-game days to appear.",
+          "text": "Continue until eight strands register. The consulted pages do not confirm the full qualifying roster.",
           "sources": [
-            "gtabase-strangers"
+            "gtabase-strangers",
+            "gtabase-list"
           ]
-        },
-        {
-          "text": "Continue qualifying strands until the counter reaches eight. The remaining roster is not fully confirmed in the consulted guides.",
-          "sources": [
-            "gtabase-list",
-            "gtabase-strangers"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
-        },
-        {
-          "id": "gtabase-strangers",
-          "name": "GTABase",
-          "title": "GTA 6 Strangers & Freaks Missions",
-          "url": "https://www.gtabase.com/gta-6/strangers-missions/"
         }
       ],
       "hidden": false,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "target": 8,
       "unit": "stranger strands",
       "chapter": 0
@@ -1662,38 +1102,30 @@
       ],
       "stage": "CHAPTER 03",
       "missable": "no",
-      "guide": "Complete Randy’s 16 requested sports-car deliveries after the Key Cloner introduction.",
+      "guide": "Randy’s garage in west Vice City requests 16 sports cars after the Key Cloner introduction.",
       "steps": [
         {
-          "text": "In Chapter 3, finish Clonin’ Keys, Makin’ GS to unlock Randy’s Wish List. Locate his RK garage in west Vice City.",
+          "text": "Finish Clonin’ Keys, Makin’ GS in Chapter 3, then follow the RK marker to Randy’s Wish List.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Check the request list and scan candidate cars with WAiNK. Look around hotel driveways in Vice Beach and Ocean Beach.",
+          "text": "Use WAiNK to match cars to the request list. Check hotel driveways in Vice Beach and Ocean Beach.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Deliver each requested model in good condition for a better payout. Complete all 16 and the final job.",
+          "text": "Deliver each requested model and finish the final job. Better-condition deliveries pay more.",
           "sources": [
             "gtabase-list"
           ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": true,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "target": 16,
       "unit": "cars delivered",
       "chapter": 3
@@ -1709,53 +1141,33 @@
       ],
       "stage": "CHAPTER 03",
       "missable": "no",
-      "guide": "Finish Tyrone’s lab-destruction strand. His final job follows his earlier Chapter 3 introduction; continue after each contact rather than repeating one site.",
+      "guide": "Start Tyrone’s Chapter 3 strand as Jason and follow the lab jobs to the finale.",
       "steps": [
         {
-          "text": "Complete Here, Kitty Kitty to start Tyrone’s sequence.",
+          "text": "Complete Here, Kitty Kitty so Tyrone can offer the first job.",
           "sources": [
             "gtabase-strangers",
             "gtabase-list"
           ]
         },
         {
-          "text": "Clear the purple-marked synthetic lab jobs as Jason.",
+          "text": "Follow the purple lab markers. Continue to the next assignment rather than repeating a cleared site.",
           "sources": [
             "gtabase-strangers",
             "gtabase-list"
           ]
         },
         {
-          "text": "Complete Tyrone’s final mission and confirm the trophy.",
+          "text": "Finish the final listed Tyrone mission and check the trophy screen.",
           "sources": [
             "gtabase-strangers",
             "gtabase-list"
           ]
-        },
-        {
-          "text": "The Chapter 3 introduction must happen before Tyrone’s finale is available.",
-          "sources": [
-            "gtabase-strangers"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-strangers",
-          "name": "GTABase",
-          "title": "GTA 6 Strangers & Freaks Missions",
-          "url": "https://www.gtabase.com/gta-6/strangers-missions/"
-        },
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": true,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "chapter": 3
     },
     {
@@ -1771,80 +1183,41 @@
       ],
       "stage": "CHAPTER 01",
       "missable": "possible",
-      "guide": "Complete the Chapter 1 balcony session as a precaution, then work toward 18 recorded meditations. Sources do not agree whether the balcony is compulsory. The separate 100% target is only 15 meditations.",
+      "guide": "Take Lucia’s balcony invitation before Chapter 1 closes, then aim for 18 recorded sessions. The 100% checklist asks for 15.",
       "steps": [
         {
-          "text": "Chapter 1: finish Down to Earth. The next morning, return to Jason’s house and speak to Lucia in the kitchen.",
+          "text": "After Down to Earth, return to Jason’s house the next morning. Talk to Lucia in the kitchen, then accept on the balcony.",
           "sources": [
             "keen",
             "gtabase-list"
           ]
         },
         {
-          "text": "Follow her to the balcony, speak again and choose Accept. Do this before leaving Chapter 1; the invitation disappears later.",
+          "text": "Keep a Chapter 1 save. The invitation disappears later; the guides do not confirm whether this session counts as mandatory.",
           "sources": [
             "keen",
             "gtabase-list"
           ]
         },
         {
-          "text": "Keep a Chapter 1 manual save. This session increments the counter, but sources have not confirmed whether the trophy requires it.",
-          "sources": [
-            "keen",
-            "gtabase-list"
-          ]
-        },
-        {
-          "text": "Continue to Coffee Break in Chapter 2 so both characters can travel together. Visit marked meditation spots with Jason and Lucia.",
+          "text": "After Coffee Break in Chapter 2, visit marked meditation spots as Jason and Lucia. Each lead’s session counts toward 18.",
           "sources": [
             "gtabase-list",
-            "gtabase-missions"
-          ]
-        },
-        {
-          "text": "Meditate as both characters where available; each character’s session counts. Continue toward 18 in Progress → Collections → Exploration → Meditations.",
-          "sources": [
-            "gtabase-list",
+            "gtabase-missions",
             "keen"
           ]
         },
         {
-          "text": "Check the trophy’s all-spots counter, not just the 100% screen: A Long Road asks for 15 of 18. Preserve the balcony save until this trophy unlocks.",
+          "text": "Check Progress → Collections → Exploration → Meditations. Track 18 for the trophy and 15 for 100%.",
           "sources": [
             "gtabase-100",
             "keen"
           ]
         }
       ],
-      "citations": [
-        {
-          "id": "keen",
-          "name": "KeenGamer",
-          "title": "GTA 6 Trophy Guide & Platinum Roadmap – All 55 Trophies",
-          "url": "https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"
-        },
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
-        },
-        {
-          "id": "gtabase-missions",
-          "name": "GTABase",
-          "title": "GTA 6 Story Missions Guide & Walkthrough",
-          "url": "https://www.gtabase.com/gta-6/missions/"
-        },
-        {
-          "id": "gtabase-100",
-          "name": "GTABase",
-          "title": "GTA 6 100% Completion Guide & Checklist",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-100-completion-guide-interactive-checklist"
-        }
-      ],
       "hidden": false,
       "evidence": "precaution",
-      "availability": "Chapter 1 balcony window: preserve a save; trophy dependency remains unconfirmed.",
+      "availability": "Take the Chapter 1 invitation while it is available. Save before closing the chapter.",
       "target": 18,
       "unit": "meditations",
       "chapter": 1
@@ -1860,53 +1233,26 @@
       ],
       "stage": "CHAPTER 02",
       "missable": "no",
-      "guide": "Take a qualifying animal for Bret’s hunting strand and complete the associated hunting job. This trophy is not the same as studying wildlife with binoculars.",
+      "guide": "Bret’s hunting jobs begin in Chapter 2. Complete the assignment for a unique animal.",
       "steps": [
         {
-          "text": "Start Bret’s Chapter 2 hunting strand after Coffee Break.",
+          "text": "After Coffee Break, open Bret’s hunting strand and pick the unique animal on a Target Deck.",
           "sources": [
             "gtabase-strangers",
             "gtabase-list"
           ]
         },
         {
-          "text": "Follow a Target Deck and hunt the requested unique animal as Jason.",
+          "text": "Hunt that animal as Jason and finish any marked turn-in objective. A wildlife observation alone does not count.",
           "sources": [
             "gtabase-strangers",
             "gtabase-list"
           ]
-        },
-        {
-          "text": "Complete the return or turn-in objective and verify the trophy.",
-          "sources": [
-            "gtabase-strangers",
-            "gtabase-list"
-          ]
-        },
-        {
-          "text": "Bret’s contract hunt is separate from photographing or studying ordinary wildlife.",
-          "sources": [
-            "gtabase-strangers"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-strangers",
-          "name": "GTABase",
-          "title": "GTA 6 Strangers & Freaks Missions",
-          "url": "https://www.gtabase.com/gta-6/strangers-missions/"
-        },
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": true,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "chapter": 2
     },
     {
@@ -1920,52 +1266,32 @@
       ],
       "stage": "FREE ROAM",
       "missable": "no",
-      "guide": "Complete three entire card sets. Select sets with the fewest missing cards in the Collections menu; individual cards do not count as sets.",
+      "guide": "Choose three card sets that are close to complete, then use the card reference to find their missing pieces.",
       "steps": [
         {
-          "text": "Open Progress → Collections and pick three sets to finish. IGN’s card reference lists the set names and sizes.",
+          "text": "Open Progress → Collections and compare the set counters. Pick three sets to finish first.",
           "sources": [
             "gtabase-list",
             "ign-cards"
           ]
         },
         {
-          "text": "Look through garages and residences while exploring. Use the cited card-page links to locate the missing cards in your selected sets.",
+          "text": "Look up the missing cards in the collection reference and check residences and garages while exploring.",
           "sources": [
             "ign-cards"
           ]
         },
         {
-          "text": "Check that all three sets show complete. A Long Road later requires 15 of the 18 sets, so keep the collection checklist.",
+          "text": "Verify that three full sets register. Keep collecting toward 15 of 18 sets for 100%.",
           "sources": [
             "gtabase-list",
             "gtabase-100"
           ]
         }
       ],
-      "citations": [
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
-        },
-        {
-          "id": "ign-cards",
-          "name": "IGN",
-          "title": "Collectible Cards",
-          "url": "https://www.ign.com/wikis/gta-6/Collectible_Cards"
-        },
-        {
-          "id": "gtabase-100",
-          "name": "GTABase",
-          "title": "GTA 6 100% Completion Guide & Checklist",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-100-completion-guide-interactive-checklist"
-        }
-      ],
       "hidden": false,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "target": 3,
       "unit": "card sets",
       "chapter": 0
@@ -1981,51 +1307,37 @@
       ],
       "stage": "FREE ROAM",
       "missable": "no",
-      "guide": "Scan 100 distinct WAiNK points of interest. Vehicle discoveries use the same app but a different counter.",
+      "guide": "Scan 100 places with WAiNK. Vehicle scans go into a separate collection.",
       "steps": [
         {
-          "text": "Watch for a nearby WAiNK notification. Press D-pad Up and hold R1 to scan a point of interest.",
+          "text": "At a WAiNK prompt, press D-pad Up and hold R1 to scan the place or object.",
           "sources": [
             "ign-waink"
           ]
         },
         {
-          "text": "Collect the 31 landmarks, 35 curiosities and 23 sculptures; supplement these with Peewees billboards and No Flusher road tags.",
+          "text": "Cover the 31 landmarks, 35 curiosities and 23 sculptures, then use billboards and road tags for the remainder.",
           "sources": [
             "ign-waink"
           ]
         },
         {
-          "text": "Examples include the IAA Friend of Freedom monument downtown, the Derelict Spy Vessel in Permit Keys and the Mermaid Display at Vice City Oceanarium.",
+          "text": "Try the Derelict Spy Vessel in Permit Keys or the Mermaid Display at Vice City Oceanarium when you are nearby.",
           "sources": [
             "ign-waink"
           ]
         },
         {
-          "text": "Track 100 locations out of the 108 listed by IGN. This also clears the WAiNK category for 100% completion.",
+          "text": "Check the location total against the 108 listed by IGN; any 100 distinct scans also meet the 100% target.",
           "sources": [
             "ign-waink",
             "gtabase-100"
           ]
         }
       ],
-      "citations": [
-        {
-          "id": "ign-waink",
-          "name": "IGN",
-          "title": "WAiNK Locations",
-          "url": "https://www.ign.com/wikis/gta-6/WAiNK_Locations"
-        },
-        {
-          "id": "gtabase-100",
-          "name": "GTABase",
-          "title": "GTA 6 100% Completion Guide & Checklist",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-100-completion-guide-interactive-checklist"
-        }
-      ],
       "hidden": false,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "target": 100,
       "unit": "WAiNK locations",
       "chapter": 0
@@ -2041,54 +1353,33 @@
       ],
       "stage": "FREE ROAM",
       "missable": "no",
-      "guide": "Complete 50 challenges. The 100% target is higher, so use the challenge menu to keep the silver-to-100% cleanup visible.",
+      "guide": "Finish 50 tracked challenges for the silver. Keep going to 70 for the completion checklist.",
       "steps": [
         {
-          "text": "Open Progress → Challenges and review the available set.",
+          "text": "Open Progress → Challenges and pick unfinished entries that match your next activities.",
           "sources": [
-            "gtabase-100",
-            "gtabase-list"
+            "gtabase-list",
+            "gtabase-100"
           ]
         },
         {
-          "text": "Finish repeatable world, race and activity challenges as they naturally unlock.",
+          "text": "Complete their listed tasks. Reopen the counter after a session to see which ones registered.",
           "sources": [
-            "gtabase-100",
-            "gtabase-list"
+            "gtabase-list",
+            "gtabase-100"
           ]
         },
         {
-          "text": "Confirm 50 completed",
+          "text": "Check for the trophy at 50 completed challenges and the separate 100% target at 70.",
           "sources": [
-            "gtabase-100",
-            "gtabase-list"
+            "gtabase-list",
+            "gtabase-100"
           ]
-        },
-        {
-          "text": "target 70 if finishing the full 100% checklist.",
-          "sources": [
-            "gtabase-100",
-            "gtabase-list"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-100",
-          "name": "GTABase",
-          "title": "GTA 6 100% Completion Guide & Checklist",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-100-completion-guide-interactive-checklist"
-        },
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": false,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "target": 50,
       "unit": "challenges",
       "chapter": 0
@@ -2104,58 +1395,39 @@
       ],
       "stage": "CHAPTER 02",
       "missable": "no",
-      "guide": "Bring your partner, lose a four-star pursuit, then clear the residual Heat. Bank vaults offer a natural way to combine this with other trophies.",
+      "guide": "Keep both leads together until the four-star pursuit and the remaining Heat have cleared.",
       "steps": [
         {
-          "text": "After Coffee Break in Chapter 2, call your partner using the character menu so both are travelling together.",
+          "text": "After Coffee Break, call your partner through the character menu and travel together.",
           "sources": [
             "gtabase-list",
             "gtabase-missions"
           ]
         },
         {
-          "text": "Reach four stars. A bank-vault job later in the game creates a four-star pursuit, allowing a combined attempt.",
+          "text": "Use an in-game vault job later in the story, or another activity that raises your Wanted Level to four stars.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Break police sight; the tunnel north of Ambrosia in Kelly County is the trophy guide’s suggested escape route.",
+          "text": "Break police sight and move out of the red Heat zone. The trophy guide suggests the tunnel north of Ambrosia in Kelly County.",
           "sources": [
-            "gtabase-list"
+            "gtabase-list",
+            "ign-wanted"
           ]
         },
         {
-          "text": "Leave the red heat area with your partner. Clear the remaining recognition indicators and wait for the award; merely losing visual contact is not enough.",
+          "text": "Stay with your partner until the recognition indicators clear, then verify the trophy.",
           "sources": [
             "gtabase-list",
             "ign-wanted"
           ]
         }
       ],
-      "citations": [
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
-        },
-        {
-          "id": "gtabase-missions",
-          "name": "GTABase",
-          "title": "GTA 6 Story Missions Guide & Walkthrough",
-          "url": "https://www.gtabase.com/gta-6/missions/"
-        },
-        {
-          "id": "ign-wanted",
-          "name": "IGN",
-          "title": "Wanted Guide: Escape the Cops and Clear Heat",
-          "url": "https://www.ign.com/wikis/gta-6/Wanted_Guide_-_How_to_Escape_the_Cops_and_Clear_Heat"
-        }
-      ],
       "hidden": false,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "chapter": 2
     },
     {
@@ -2169,51 +1441,31 @@
       ],
       "stage": "CHAPTER 02",
       "missable": "no",
-      "guide": "Rob three shops in one continuous Wanted streak with your partner. Prepare a short route before starting the first robbery.",
+      "guide": "Plan three nearby in-game shop stops and keep your partner and the Wanted indicator through the third stop.",
       "steps": [
         {
-          "text": "Bring a partner, armour and healing supplies. The three north Vice City jewelry stores provide a compact route after Yasmani’s Chapter 3 introduction.",
+          "text": "After Yasmani’s introduction, the trophy guide suggests the three jewelry shops in north Vice City as a short route.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Rob the first shop, then reach the second and third while the Wanted state stays active. Do not finish an escape between shops.",
+          "text": "Complete the shops in sequence without allowing the game’s Wanted indicator to clear between stops.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "After the third, allow time for the notification. The cited guide reports a delay of about 30 seconds; if it fails, try a fourth shop within the same streak.",
-          "sources": [
-            "gtabase-list"
-          ]
-        },
-        {
-          "text": "Only clear your Wanted level once the award has registered. Use the Heat guide for a getaway afterwards.",
+          "text": "Wait for the award before ending the chase. The guide reports a delay and suggests an extra stop if it has not registered.",
           "sources": [
             "gtabase-list",
             "ign-wanted"
           ]
         }
       ],
-      "citations": [
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
-        },
-        {
-          "id": "ign-wanted",
-          "name": "IGN",
-          "title": "Wanted Guide: Escape the Cops and Clear Heat",
-          "url": "https://www.ign.com/wikis/gta-6/Wanted_Guide_-_How_to_Escape_the_Cops_and_Clear_Heat"
-        }
-      ],
       "hidden": false,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "target": 3,
       "unit": "shops in a row",
       "chapter": 2
@@ -2229,44 +1481,31 @@
       ],
       "stage": "FREE ROAM",
       "missable": "no",
-      "guide": "Scan 100 distinct vehicles through WAiNK. Scanning is enough; stealing or purchasing each vehicle is not part of the description.",
+      "guide": "Discover 100 different vehicle models with WAiNK. Buying or keeping the vehicles is optional.",
       "steps": [
         {
-          "text": "Open WAiNK on the phone while near passing traffic.",
+          "text": "Open WAiNK near traffic and scan vehicles you have not discovered.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Scan new vehicle models rather than repeating familiar ones.",
+          "text": "Visit different areas to vary the traffic. Scanning another copy of the same model does not add a discovery.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Check Progress and continue toward 100",
+          "text": "Check the Vehicles collection for the award at 100. The 100% checklist asks for 200 models.",
           "sources": [
-            "gtabase-list"
+            "gtabase-list",
+            "gtabase-100"
           ]
-        },
-        {
-          "text": "the 100% checklist uses a higher vehicle-scan target.",
-          "sources": [
-            "gtabase-list"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": false,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "target": 100,
       "unit": "vehicles discovered",
       "chapter": 0
@@ -2282,52 +1521,32 @@
       ],
       "stage": "FREE ROAM",
       "missable": "no",
-      "guide": "Take down five enemies during a single activation of Combat Focus. Prepare a full meter and a group of hostile targets first.",
+      "guide": "In the game, keep one Combat Focus activation running for five eligible takedowns.",
       "steps": [
         {
-          "text": "Refill your Focus before fighting. Carry a weapon suited to several rapid takedowns, such as an assault rifle.",
+          "text": "Start with a full Focus meter and choose a gang encounter with at least five game enemies.",
           "sources": [
             "gtabase-list",
             "ign-focus"
           ]
         },
         {
-          "text": "Find a gang operation with five enemies in reach. The trophy guide says civilians, police and soldiers may not count; use gang hostiles.",
-          "sources": [
-            "gtabase-list"
-          ]
-        },
-        {
-          "text": "Aim, then click L3 and R3 together. Combat Focus drains while aiming; take down all five before this one activation ends.",
+          "text": "While aiming, click L3 and R3 together. Finish all five before that activation runs out.",
           "sources": [
             "ign-focus",
             "gtabase-list"
           ]
         },
         {
-          "text": "If the meter runs out, refill and try a fresh group. Shooting Ranges improve Focus and also advance The Shootist.",
+          "text": "If the game does not count the encounter, refill Focus and try a fresh gang operation. Range medals also help build Focus.",
           "sources": [
             "gtabase-list"
           ]
         }
       ],
-      "citations": [
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
-        },
-        {
-          "id": "ign-focus",
-          "name": "IGN",
-          "title": "How Focus Works",
-          "url": "https://www.ign.com/wikis/gta-6/How_Focus_Works"
-        }
-      ],
       "hidden": false,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "target": 5,
       "unit": "Focus takedowns",
       "chapter": 0
@@ -2343,44 +1562,24 @@
       ],
       "stage": "FREE ROAM",
       "missable": "no",
-      "guide": "Take a passenger jet from an airport boarding bridge and escape. A plane parked elsewhere on the apron is not the setup described in the sourced tip.",
+      "guide": "The trophy guide points to a boarding-bridge jet at VCIA during free roam.",
       "steps": [
         {
-          "text": "Travel to the VCIA terminal and identify a jet attached to a boarding bridge.",
+          "text": "At the airport terminal, check bridge gates E3 and E4 for an attached passenger jet.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Get aboard, take off from the airport and gain distance from the airfield.",
+          "text": "Use the game’s aircraft controls to depart, leave the pursuit area and confirm the award.",
           "sources": [
             "gtabase-list"
           ]
-        },
-        {
-          "text": "Lose the resulting pursuit and confirm the trophy.",
-          "sources": [
-            "gtabase-list"
-          ]
-        },
-        {
-          "text": "The sourced airport tip names gates E3 and E4 as examples for bridge-parked jets.",
-          "sources": [
-            "gtabase-list"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": true,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "chapter": 0
     },
     {
@@ -2394,38 +1593,24 @@
       ],
       "stage": "FREE ROAM",
       "missable": "no",
-      "guide": "Steal a Rhino from Mile Zero Air Station on Mariana and use it against the base defenders. Leave room for a Wanted-level escape afterwards.",
+      "guide": "Look for an in-game Rhino at Mile Zero Air Station on Mariana.",
       "steps": [
         {
-          "text": "Travel to the restricted Mile Zero base on the southwest island of Mariana.",
+          "text": "Visit the southwest island and look near the southern part of the air station for the Rhino.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Reach the Rhino tanks near the southern part of the facility and take one.",
+          "text": "Use the Rhino against the game’s base hostiles, then finish the encounter and check the trophy list.",
           "sources": [
             "gtabase-list"
           ]
-        },
-        {
-          "text": "Use the tank against hostile targets, then finish the resulting encounter.",
-          "sources": [
-            "gtabase-list"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": true,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "chapter": 0
     },
     {
@@ -2439,38 +1624,30 @@
       ],
       "stage": "CHAPTER 03",
       "missable": "no",
-      "guide": "Use a quiet back-door entry to rob a jewelry store undetected. The Chapter 3 Snap Gun unlock is the key preparation.",
+      "guide": "Yasmani’s Chapter 3 introduction gives you the Snap Gun for a quiet jewelry job.",
       "steps": [
         {
-          "text": "Complete Yasmani’s Jewelry Jobs introduction in Chapter 3 to obtain the Snap Gun.",
+          "text": "Complete Jewelry Jobs to unlock the tool before trying the trophy.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Approach a jewelry store’s locked rear door; use the Snap Gun rather than kicking the door and triggering the alarm.",
+          "text": "At a game jewelry store such as Richardson Jewelry & Diamonds, use the Snap Gun on the rear entrance.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Locate the safe-code note in the back room, empty the safe and leave unseen. The guide suggests Richardson Jewelry & Diamonds in Vice City.",
+          "text": "Find the safe-code note in the back room, clear the marked safe and leave without raising the alarm.",
           "sources": [
             "gtabase-list"
           ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": false,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "chapter": 3
     },
     {
@@ -2484,60 +1661,40 @@
       ],
       "stage": "CHAPTER 04",
       "missable": "no",
-      "guide": "Rob five separate bank vaults and escape after each. Start the Chapter 4 vault introduction before searching for accessible vaults.",
+      "guide": "Open the Chapter 4 vault activity and log five different successful escapes. The 100% checklist needs eight.",
       "steps": [
         {
-          "text": "Complete That’s Where The Money Is… in Chapter 4. Its café meeting introduces the vault robbery system.",
+          "text": "Finish That’s Where the Money Is… and follow the game’s security-van objective to a vault.",
           "sources": [
             "gtabase-list",
             "gtabase-100"
           ]
         },
         {
-          "text": "Tail a security van to its bank. When the guard opens the vault for a cash delivery, enter and take the haul.",
+          "text": "Complete the in-game cash pickup. Bringing your partner lets the game track a second bag.",
           "sources": [
             "gtabase-list",
             "gtabase-100"
           ]
         },
         {
-          "text": "Bring your partner to carry a second bag. Escape the four-star response on a fast bike, then change vehicles and leave the Heat zone.",
+          "text": "Clear the game’s four-star chase and Heat, then repeat at a different vault.",
           "sources": [
             "gtabase-list",
             "ign-wanted"
           ]
         },
         {
-          "text": "Repeat at five different vaults. Complete all eight for A Long Road; Yasmani can sell van tips for $10,000 after his earlier jobs.",
+          "text": "Check the count at five for the trophy. Yasmani offers van tips after his earlier jobs; use them for the eight-vault cleanup if needed.",
           "sources": [
             "gtabase-list",
             "gtabase-100"
           ]
         }
       ],
-      "citations": [
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
-        },
-        {
-          "id": "gtabase-100",
-          "name": "GTABase",
-          "title": "GTA 6 100% Completion Guide & Checklist",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-100-completion-guide-interactive-checklist"
-        },
-        {
-          "id": "ign-wanted",
-          "name": "IGN",
-          "title": "Wanted Guide: Escape the Cops and Clear Heat",
-          "url": "https://www.ign.com/wikis/gta-6/Wanted_Guide_-_How_to_Escape_the_Cops_and_Clear_Heat"
-        }
-      ],
       "hidden": false,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "target": 5,
       "unit": "vaults escaped",
       "chapter": 4
@@ -2553,45 +1710,25 @@
       ],
       "stage": "FREE ROAM",
       "missable": "no",
-      "guide": "Open an armored truck’s rear cargo, collect the money and escape the Heat zone.",
+      "guide": "Use the game’s armored truck encounter and clear the Heat after collecting its cargo.",
       "steps": [
         {
-          "text": "Find an armored truck and block its movement using another vehicle. Prepare sticky bombs before the attempt.",
+          "text": "Find an armored truck encounter in free roam and use the game’s sticky-bomb interaction on its cargo doors.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Place a sticky bomb on the rear doors, move clear and detonate it. Collect the cash from the truck.",
-          "sources": [
-            "gtabase-list"
-          ]
-        },
-        {
-          "text": "Break pursuit and clear the red Heat area. The consulted guide also reports bank-vault robberies can trigger this trophy, but the truck route matches the official condition directly.",
+          "text": "Collect the cash and clear the on-screen pursuit and Heat. The guide also reports vault jobs as a possible alternate trigger.",
           "sources": [
             "gtabase-list",
             "ign-wanted"
           ]
         }
       ],
-      "citations": [
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
-        },
-        {
-          "id": "ign-wanted",
-          "name": "IGN",
-          "title": "Wanted Guide: Escape the Cops and Clear Heat",
-          "url": "https://www.ign.com/wikis/gta-6/Wanted_Guide_-_How_to_Escape_the_Cops_and_Clear_Heat"
-        }
-      ],
       "hidden": false,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "chapter": 0
     },
     {
@@ -2605,38 +1742,24 @@
       ],
       "stage": "FREE ROAM",
       "missable": "no",
-      "guide": "Reveal the full Leonida map. Use fast travel by road, boat or plane to uncover the remaining fogged regions.",
+      "guide": "Clear the remaining fog on Leonida’s world map.",
       "steps": [
         {
-          "text": "Open the world map and identify unexplored dark patches.",
+          "text": "Zoom out and find unexplored patches, especially around the edges and coast.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Travel through the counties and along the edges of the map to expose them.",
+          "text": "Visit the gaps by road, boat or aircraft, then check the map after each pass.",
           "sources": [
             "gtabase-list"
           ]
-        },
-        {
-          "text": "Recheck the map for residual fog until the exploration trophy unlocks.",
-          "sources": [
-            "gtabase-list"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": false,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "chapter": 0
     },
     {
@@ -2650,45 +1773,31 @@
       ],
       "stage": "FREE ROAM",
       "missable": "no",
-      "guide": "Rob one illegal operation belonging to each of the nine gangs. Complete the map objectives and check gang coverage.",
+      "guide": "Complete one marked operation for each of Leonida’s nine gangs.",
       "steps": [
         {
-          "text": "Find the yellow illegal-operation icons around Leonida. Select one belonging to a gang you have not robbed yet.",
+          "text": "Pick a yellow illegal-operation marker for a gang you have not yet checked off.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Take the operation’s key valuables; hover over the map icon to see how many are still missing.",
+          "text": "Look at the map marker for remaining key valuables and finish the operation’s requirements.",
           "sources": [
             "gtabase-100"
           ]
         },
         {
-          "text": "Use Progress → Gangs to confirm coverage of all nine gangs. For 100% completion, go on to clear all 39 operations.",
+          "text": "Verify all nine groups in Progress → Gangs. Clear all 39 operations separately for 100%.",
           "sources": [
             "gtabase-list",
             "gtabase-100"
           ]
         }
       ],
-      "citations": [
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
-        },
-        {
-          "id": "gtabase-100",
-          "name": "GTABase",
-          "title": "GTA 6 100% Completion Guide & Checklist",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-100-completion-guide-interactive-checklist"
-        }
-      ],
       "hidden": false,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "target": 9,
       "unit": "gangs robbed",
       "chapter": 0
@@ -2704,52 +1813,26 @@
       ],
       "stage": "FREE ROAM",
       "missable": "no",
-      "guide": "The precise Ocean Beach cocktail venue is not confirmed in the consulted guide. The official description is a clue, not evidence of a particular rooftop.",
+      "guide": "The source gives an Ocean Beach cocktail clue but no tested venue or trigger.",
       "steps": [
         {
-          "text": "Official clue: enjoy a cocktail with a view on Ocean Beach. No specific bar is established by the consulted guide.",
+          "text": "Keep this flagged for Ocean Beach exploration. The description does not identify a bar or a specific time.",
           "sources": [
             "exophase",
             "gtabase-list"
           ]
         },
         {
-          "text": "Keep this on your unresolved list during Ocean Beach exploration. Do not commit a long detour to an uncited venue claim.",
-          "sources": [
-            "gtabase-list"
-          ]
-        },
-        {
-          "text": "Revisit the linked trophy guide for a confirmed trigger. Mark earned only after the console awards it.",
+          "text": "Check the cited trophy guides for a confirmed venue before planning a detour.",
           "sources": [
             "gtabase-list",
             "keen"
           ]
         }
       ],
-      "citations": [
-        {
-          "id": "exophase",
-          "name": "Exophase",
-          "title": "Grand Theft Auto VI · PS5 trophy list",
-          "url": "https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/"
-        },
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
-        },
-        {
-          "id": "keen",
-          "name": "KeenGamer",
-          "title": "GTA 6 Trophy Guide & Platinum Roadmap – All 55 Trophies",
-          "url": "https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"
-        }
-      ],
       "hidden": true,
       "evidence": "unresolved",
-      "availability": "Trigger unresolved; no specific missable condition is established.",
+      "availability": "Timing and unlock conditions remain unverified.",
       "chapter": 0
     },
     {
@@ -2763,52 +1846,26 @@
       ],
       "stage": "FREE ROAM",
       "missable": "no",
-      "guide": "A showroom exit is implied, but the exact vehicle and showroom are unconfirmed. Avoid treating a visual joke as a verified walkthrough.",
+      "guide": "A vehicle showroom is the only location clue. The required vehicle and setup remain unconfirmed.",
       "steps": [
         {
-          "text": "Official clue: smash out of a vehicle showroom in classic style. The source does not verify a particular showroom or car.",
+          "text": "Look for a tested showroom route in the cited trophy references before spending on a vehicle.",
           "sources": [
             "exophase",
             "gtabase-list"
           ]
         },
         {
-          "text": "Keep a save before experimenting; no confirmed method is available in the consulted guide.",
+          "text": "Keep a manual save if trying the clue in-game. Tick it only when PlayStation registers the award.",
           "sources": [
             "gtabase-list",
             "keen"
           ]
-        },
-        {
-          "text": "Use the linked guide for a tested update before repeating expensive vehicle setups.",
-          "sources": [
-            "gtabase-list"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "exophase",
-          "name": "Exophase",
-          "title": "Grand Theft Auto VI · PS5 trophy list",
-          "url": "https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/"
-        },
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
-        },
-        {
-          "id": "keen",
-          "name": "KeenGamer",
-          "title": "GTA 6 Trophy Guide & Platinum Roadmap – All 55 Trophies",
-          "url": "https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"
         }
       ],
       "hidden": true,
       "evidence": "unresolved",
-      "availability": "Trigger unresolved; no specific missable condition is established.",
+      "availability": "Timing and unlock conditions remain unverified.",
       "chapter": 0
     },
     {
@@ -2822,38 +1879,30 @@
       ],
       "stage": "CHAPTER 02",
       "missable": "no",
-      "guide": "Clear Kolt & Associates’ Kingpin Bowling operation in Port Gellhorn. Loot its three key valuables, then escape.",
+      "guide": "Clear the three valuables at the Kingpin Bowling operation in Port Gellhorn, then leave the in-game pursuit.",
       "steps": [
         {
-          "text": "After Hit Kingpin Bowling appears in Chapter 2, enter the Port Gellhorn bowling alley. Bring sticky bombs for the safe.",
+          "text": "After Hit Kingpin Bowling opens in Chapter 2, go to the Kolt & Associates alley.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Take the luxury watch from the southeast office, the Gutterball Moreland 850 from the northeast table, and the northeast-hallway safe contents.",
+          "text": "Check the southeast office for the watch, the northeast table for the Gutterball Moreland 850 and the northeast hall for the safe.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Lose the police to trigger the award. The guide says items can be collected over multiple visits, but the operation takes a long time to respawn.",
+          "text": "Escape in the game and verify the award. The guide says repeat visits can count, but the site takes time to respawn.",
           "sources": [
             "gtabase-list"
           ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": true,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "chapter": 2
     },
     {
@@ -2867,38 +1916,24 @@
       ],
       "stage": "FREE ROAM",
       "missable": "no",
-      "guide": "Raise Strength to its maximum for both Jason and Lucia. Train together where possible, then check each character rather than assuming one workout completes both.",
+      "guide": "Raise Strength to maximum on both playable characters. Check their profiles separately.",
       "steps": [
         {
-          "text": "Visit an available gym or fitness-club activity.",
+          "text": "Take your partner to a gym or fitness-club activity and train together when possible.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Work out with your partner present so both characters can make progress.",
+          "text": "Open each character’s stat screen. Train the one who is still short of maximum.",
           "sources": [
             "gtabase-list"
           ]
-        },
-        {
-          "text": "Check each character’s Strength stat until both are maxed.",
-          "sources": [
-            "gtabase-list"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": true,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "chapter": 0
     },
     {
@@ -2912,44 +1947,30 @@
       ],
       "stage": "FREE ROAM",
       "missable": "no",
-      "guide": "Accumulate 500 actions that affect Criminal Profile. The trophy guide supplies the count; IGN explains how profiles and their permanent consequences work.",
+      "guide": "The guide reports 500 profile-affecting actions. No particular direction on the Criminal Profile meter is required.",
       "steps": [
         {
-          "text": "Enable Criminal Profile notifications in Settings → UI to watch qualifying actions while playing.",
+          "text": "Enable Criminal Profile notifications under Settings → UI and watch for qualifying events in normal play.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Accumulate 500 profile-affecting actions through normal play. The description does not ask you to reach Irredeemable.",
+          "text": "Track those events toward 500 rather than forcing a particular profile state.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Keep an earlier save if your profile nears Irredeemable: IGN says that state cannot be reversed except by loading a save.",
+          "text": "Keep an earlier save if you want to avoid a permanent Irredeemable profile.",
           "sources": [
             "ign-profile"
           ]
         }
       ],
-      "citations": [
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
-        },
-        {
-          "id": "ign-profile",
-          "name": "IGN",
-          "title": "Criminal Profile Guide and Consequences",
-          "url": "https://www.ign.com/wikis/gta-6/Criminal_Profile_Guide_and_Consequences"
-        }
-      ],
       "hidden": true,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "target": 500,
       "unit": "profile actions",
       "chapter": 0
@@ -2965,51 +1986,25 @@
       ],
       "stage": "FREE ROAM",
       "missable": "no",
-      "guide": "The second-attempt hint has no confirmed unlock method in the consulted sources.",
+      "guide": "The second-attempt wording has no verified activity or location in the cited sources.",
       "steps": [
         {
-          "text": "Read the official clue: “Second time’s the charm.” No activity or location is named.",
+          "text": "Keep the official clue on the unresolved list. It does not state that a race or mission must fail.",
           "sources": [
             "exophase"
           ]
         },
         {
-          "text": "Keep this marked unresolved; the trophy guide has not confirmed a specific second-attempt event.",
+          "text": "Look for a tested update on either trophy guide and mark progress only after a console unlock.",
           "sources": [
             "gtabase-list",
             "keen"
           ]
-        },
-        {
-          "text": "Check the cited guide for an updated method. Do not assume a failed race or a story decision is required.",
-          "sources": [
-            "gtabase-list"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "exophase",
-          "name": "Exophase",
-          "title": "Grand Theft Auto VI · PS5 trophy list",
-          "url": "https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/"
-        },
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
-        },
-        {
-          "id": "keen",
-          "name": "KeenGamer",
-          "title": "GTA 6 Trophy Guide & Platinum Roadmap – All 55 Trophies",
-          "url": "https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"
         }
       ],
       "hidden": true,
       "evidence": "unresolved",
-      "availability": "Trigger unresolved; no specific missable condition is established.",
+      "availability": "Timing and unlock conditions remain unverified.",
       "chapter": 0
     },
     {
@@ -3023,51 +2018,25 @@
       ],
       "stage": "FREE ROAM",
       "missable": "no",
-      "guide": "The cryptic description has no confirmed trigger in the consulted guides. No UFO location is claimed here.",
+      "guide": "The official joke description has no verified event attached to it in the sources reviewed.",
       "steps": [
         {
-          "text": "The official description is “What the hell just happened?” It supplies no count, mission or location.",
+          "text": "The trophy list gives no location, counter or mission. Leave the checklist open for a later discovery.",
           "sources": [
             "exophase"
           ]
         },
         {
-          "text": "Both consulted trophy guides leave the method unresolved; retain a manual save while investigating unusual world events.",
+          "text": "Check the guide updates before treating a rumored encounter as the unlock condition.",
           "sources": [
             "gtabase-list",
             "keen"
           ]
-        },
-        {
-          "text": "Check the source page for a tested update rather than treating a fan theory as a confirmed route.",
-          "sources": [
-            "gtabase-list"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "exophase",
-          "name": "Exophase",
-          "title": "Grand Theft Auto VI · PS5 trophy list",
-          "url": "https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/"
-        },
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
-        },
-        {
-          "id": "keen",
-          "name": "KeenGamer",
-          "title": "GTA 6 Trophy Guide & Platinum Roadmap – All 55 Trophies",
-          "url": "https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"
         }
       ],
       "hidden": true,
       "evidence": "unresolved",
-      "availability": "Trigger unresolved; no specific missable condition is established.",
+      "availability": "Timing and unlock conditions remain unverified.",
       "chapter": 0
     },
     {
@@ -3081,52 +2050,26 @@
       ],
       "stage": "FREE ROAM",
       "missable": "no",
-      "guide": "A melee drive-by is explicit, but the precise target and setup remain unconfirmed. The name alone does not establish literal bowling pins.",
+      "guide": "The PlayStation clue names a melee drive-by but leaves the target and vehicle unspecified.",
       "steps": [
         {
-          "text": "Official condition: bowl them over with a melee drive-by. The source does not yet confirm the target or vehicle.",
+          "text": "Keep this on the unresolved list. The bowling pun does not identify the bowling alley as the location.",
           "sources": [
             "exophase",
             "gtabase-list"
           ]
         },
         {
-          "text": "Leave the tracker entry unresolved until a tested setup is published or the trophy actually unlocks in your playthrough.",
+          "text": "Use a tested setup from the linked sources if one appears; confirm against the PS5 notification.",
           "sources": [
-            "keen",
-            "gtabase-list"
+            "gtabase-list",
+            "keen"
           ]
-        },
-        {
-          "text": "Use the linked guide’s updates before repeatedly trying a speculative bowling-alley setup.",
-          "sources": [
-            "gtabase-list"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "exophase",
-          "name": "Exophase",
-          "title": "Grand Theft Auto VI · PS5 trophy list",
-          "url": "https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/"
-        },
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
-        },
-        {
-          "id": "keen",
-          "name": "KeenGamer",
-          "title": "GTA 6 Trophy Guide & Platinum Roadmap – All 55 Trophies",
-          "url": "https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"
         }
       ],
       "hidden": true,
       "evidence": "unresolved",
-      "availability": "Trigger unresolved; no specific missable condition is established.",
+      "availability": "Timing and unlock conditions remain unverified.",
       "chapter": 0
     },
     {
@@ -3140,47 +2083,26 @@
       ],
       "stage": "CHAPTER 03",
       "missable": "no",
-      "guide": "Launder $250,000 in Marked Bills through your contacts. This is a money-fencing total; keep a running tally rather than counting cash collected.",
+      "guide": "Track the amount laundered through contacts, since picking up Marked Bills is only the first part.",
       "steps": [
         {
-          "text": "Progress the story until Marked Bills and the relevant contacts are available.",
+          "text": "Follow the story until contacts accept marked cash. Collect Marked Bills from the associated in-game jobs.",
           "sources": [
-            "gtabase-100",
-            "gtabase-list"
+            "gtabase-list",
+            "gtabase-100"
           ]
         },
         {
-          "text": "Collect marked cash from bank work and robbery activities.",
+          "text": "Return to a contact to launder the bills and check the trophy’s running total until it reaches $250,000.",
           "sources": [
-            "gtabase-100",
-            "gtabase-list"
+            "gtabase-list",
+            "gtabase-100"
           ]
-        },
-        {
-          "text": "Use your contacts to launder it and track the total until $250,000 is recorded.",
-          "sources": [
-            "gtabase-100",
-            "gtabase-list"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-100",
-          "name": "GTABase",
-          "title": "GTA 6 100% Completion Guide & Checklist",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-100-completion-guide-interactive-checklist"
-        },
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": false,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "target": 250000,
       "unit": "marked dollars",
       "chapter": 3
@@ -3196,38 +2118,24 @@
       ],
       "stage": "FREE ROAM",
       "missable": "no",
-      "guide": "Spend a cumulative $100,000 in shops. Save this for after essential tool, property and activity purchases so early cash supports progress too.",
+      "guide": "Shop purchases accumulate toward $100,000. Check what your normal purchases have already covered.",
       "steps": [
         {
-          "text": "Buy necessities and upgrades as shops become available.",
+          "text": "Buy the gear and supplies needed for your remaining trophies as shops open.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Use optional shop purchases to add to the cumulative spend.",
+          "text": "Check cumulative shop spending and use optional purchases to close the gap to $100,000.",
           "sources": [
             "gtabase-list"
           ]
-        },
-        {
-          "text": "Check the trophy progress indicator until it records $100,000.",
-          "sources": [
-            "gtabase-list"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": false,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "target": 100000,
       "unit": "dollars spent",
       "chapter": 0
@@ -3243,38 +2151,24 @@
       ],
       "stage": "FREE ROAM",
       "missable": "no",
-      "guide": "Purchase every garage property offered in the property list. Keep funds available and verify the entire property collection, not just one garage.",
+      "guide": "Check the property listings for unowned garages and reserve cash for all of them.",
       "steps": [
         {
-          "text": "Open the map/property listings and identify the garage properties.",
+          "text": "Use the property icons and listings to identify every garage you still need to buy.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Save money while progressing through the story and side jobs.",
+          "text": "Purchase the remaining garages as funds allow, then confirm the trophy on PlayStation.",
           "sources": [
             "gtabase-list"
           ]
-        },
-        {
-          "text": "Purchase all listed garages and confirm the trophy notification.",
-          "sources": [
-            "gtabase-list"
-          ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": false,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "chapter": 0
     },
     {
@@ -3288,38 +2182,30 @@
       ],
       "stage": "CHAPTER 02",
       "missable": "no",
-      "guide": "Register ten vehicles through Scooter Bros. Garage capacity and registration fees are the practical limits.",
+      "guide": "Register ten vehicles in Scooter Bros. Leave room in your garage before paying for another.",
       "steps": [
         {
-          "text": "In Chapter 2, use Moses in Port Gellhorn for vehicles without trackers. In Chapter 3, Pay ’n’ Spray also handles tracked models.",
+          "text": "Use Moses in Port Gellhorn for untracked vehicles in Chapter 2. From Chapter 3, Pay ’n’ Spray also handles tracked models.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Make sure you have free garage space. Take a cheap car or bike to the registration service and pay its fee.",
+          "text": "Bring a vehicle to the registration service, pay the fee and verify it appears in Scooter Bros.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Repeat for ten vehicles and check Scooter Bros. Buy more garage space if registration is blocked.",
+          "text": "Repeat to ten registrations. If the next registration is blocked, check for free garage space.",
           "sources": [
             "gtabase-list"
           ]
-        }
-      ],
-      "citations": [
-        {
-          "id": "gtabase-list",
-          "name": "GTABase",
-          "title": "GTA 6 Trophy Guide & Achievements List",
-          "url": "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
         }
       ],
       "hidden": false,
       "evidence": "sourced",
-      "availability": "No trophy missable condition identified by the consulted guides; available in later free roam.",
+      "availability": "The consulted sources identify no trophy lockout for this route.",
       "target": 10,
       "unit": "registrations",
       "chapter": 2
@@ -3333,21 +2219,22 @@
       "note": "Possible missable · do Lucia’s balcony meditation when it appears; trophy dependency is unconfirmed.",
       "steps": [
         {
-          "text": "Keep a Chapter 1 manual save. The balcony meditation may disappear when the chapter closes, though the guide has not confirmed whether it is required for the meditation trophy.",
+          "text": "Keep a Chapter 1 save and accept Lucia’s balcony meditation. Its trophy requirement is unconfirmed.",
           "sources": [
             "gtabase-list",
             "ign-story"
           ]
         },
         {
-          "text": "Complete Gone Fishing and each story transition at your own pace; the story trophies are milestone unlocks, not collectible branches.",
+          "text": "Finish Gone Fishing, then follow the main story into Chapter 2.",
+          "storySpoiler": true,
           "sources": [
             "gtabase-missions",
             "exophase"
           ]
         },
         {
-          "text": "Side missions Get Shirley’s Rum and Steal the Scooter are chapter-limited. The mission guide says these do not block trophies or 100% completion.",
+          "text": "Get Shirley’s Rum and Steal the Scooter can expire. Neither gates a trophy or 100%.",
           "sources": [
             "gtabase-missions",
             "gtabase-100"
@@ -3362,20 +2249,20 @@
       "note": "Start repeatable hobbies early; counters survive story progress.",
       "steps": [
         {
-          "text": "Try one each of fishing, hunting, golf, range shooting, pool, basketball, arcade, racing and stunts for Master of None.",
+          "text": "Try all nine activities for Master of None: fishing, hunting, golf, range, pool, basketball, arcade, racing and stunts.",
           "sources": [
             "gtabase-list"
           ]
         },
         {
-          "text": "Start Bret’s hunting deck, Cal’s fishing challenges and Billy’s strand when they open. Track their own final missions for Fair Game, Baited My Tackle and The Lone Rider.",
+          "text": "Take Bret’s hunt, beat Cal at fishing and finish Billy’s dirt-bike strand.",
           "sources": [
             "gtabase-strangers",
             "gtabase-list"
           ]
         },
         {
-          "text": "Scan new vehicles and WAiNK points while roaming. The platinum-adjacent counters are only 200 vehicle models and 100 WAiNK scans for the 100% checklist.",
+          "text": "Scan vehicle models and WAiNK locations as you explore. The 100% checklist asks for 200 models and 100 locations.",
           "sources": [
             "gtabase-100",
             "ign-collections"
@@ -3390,21 +2277,22 @@
       "note": "Optional character trophies · finish strand-specific jobs after they begin.",
       "steps": [
         {
-          "text": "Complete the story to the Key Cloner and start Andy, Randy, Yasmani and Tyrone’s available strands; use their own mission counters to track follow-ups.",
+          "text": "After Key Cloner, start the available jobs for Andy, Randy, Yasmani and Tyrone.",
+          "storySpoiler": true,
           "sources": [
             "gtabase-strangers",
             "gtabase-missions"
           ]
         },
         {
-          "text": "Use the trophy’s progress counter for Strangers & Freaks: GTABase warns that not every stranger strand qualifies, so count only confirmed progress.",
+          "text": "Finish eight qualifying strands for Strangers & Freaks. Use the trophy counter to confirm each strand counts.",
           "sources": [
             "gtabase-list",
             "gtabase-strangers"
           ]
         },
         {
-          "text": "If a Yago race or optional phone pickup appears time-limited, finish it for side-content completion. The guide says these optional windows do not gate any listed trophy.",
+          "text": "Do Yago’s race and optional phone jobs when offered if you want side-content completion.",
           "sources": [
             "gtabase-missions"
           ]
@@ -3418,21 +2306,23 @@
       "note": "Do the Chapter 4 vault introduction before relying on the bank counter; free roam continues after credits.",
       "steps": [
         {
-          "text": "Complete That’s Where the Money Is… when it opens. It introduces the security-van bank-vault loop used by Maximum Withdrawal.",
+          "text": "That’s Where the Money Is… opens vault jobs. Escape five vaults for the trophy; clear all eight for 100%.",
+          "storySpoiler": true,
           "sources": [
             "gtabase-list",
             "gtabase-missions"
           ]
         },
         {
-          "text": "Keep the optional job This Is a Free Call From… on your general missable-mission audit. It has no trophy consequence per the current mission guide.",
+          "text": "This Is a Free Call From… can expire without costing a trophy.",
           "sources": [
             "gtabase-missions",
             "gtabase-100"
           ]
         },
         {
-          "text": "Complete VCIA Takedown, Operation Savage Glory and The End of the Road for the remaining listed story trophies.",
+          "text": "Finish VCIA Takedown, Operation Savage Glory and The End of the Road for the remaining mission trophies.",
+          "storySpoiler": true,
           "sources": [
             "gtabase-missions",
             "ign-story"
@@ -3447,20 +2337,20 @@
       "note": "The actual in-game completion checklist is authoritative when sources disagree.",
       "steps": [
         {
-          "text": "Clear every category in Progress → Stats → 100% Completion. Prior work counts; the 100% screen appears after the story.",
+          "text": "After the credits, open Progress → Stats → 100% Completion. Earlier work counts.",
           "sources": [
             "gtabase-100",
             "ign-story"
           ]
         },
         {
-          "text": "Full-set categories include bank-vault jobs, gang operations, range golds, drone time trials and Bret’s Target Decks. Many other counters require only their listed subset.",
+          "text": "Full sets include 42 range golds, 42 drone trials, eight vaults, 39 gang operations and 15 Bret Target Decks.",
           "sources": [
             "gtabase-100"
           ]
         },
         {
-          "text": "Complete eight qualifying Stranger strands separately: the trophy roadmap source conflicts with the completion guide about whether those quests count as optional tasks.",
+          "text": "Log eight qualifying Stranger strands separately. Sources disagree on their 100% credit.",
           "sources": [
             "gtabase-list",
             "gtabase-100",
@@ -3557,7 +2447,7 @@
   "audit": {
     "crosscheckedNamesDescriptionsGrades": 55,
     "sources": 15,
-    "guideSteps": 202,
+    "guideSteps": 142,
     "missableCount": 1,
     "lastChecked": "2026-11-20",
     "hidden": 28,

@@ -1,3 +1,9 @@
-Vice Atlas is a static offline GTA VI trophy guide. Serve this directory with any local HTTP server, then open index.html in desktop Chrome. No runtime service other than the same local host is required.
+VICE ATLAS | GTA VI for PlayStation 5
 
-The checklist, spoiler preference and manual target counters live in browser localStorage. Export JSON for backup or import it on another device. The research links open only if a reader chooses them.
+Serve this directory as the root of a local HTTP site, then open it in Chrome.
+The guide loads its own assets and trophy catalog from that local address.
+Source links are optional; reading them requires an internet connection.
+
+Trophy ticks, manual counters and the spoiler setting stay in your browser.
+Export JSON before clearing site data or moving to a different browser.
+The export records your checklist, not a sync with the PlayStation Network.
