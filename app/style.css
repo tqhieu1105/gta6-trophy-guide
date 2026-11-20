@@ -374,3 +374,70 @@ body[data-view="roadmap"] .phase h2 { font-size: 23px; }
 @media (max-width: 760px) {
   #route-progress { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+/* Overview pages keep their reading order when the dossier reduces them. */
+.evidence-metrics { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin:8px 0; }
+.evidence-metrics > div { padding:8px 12px; display:flex; align-items:baseline; gap:10px; background:#e1ece5; border:1px solid #b7cdbf; }
+.evidence-metrics b { font-size:34px; line-height:1.1; color:#1b4e3a; }
+.evidence-metrics span { font-size:13px; color:#35594a; font-weight:700; }
+.source-coverage progress { display:block; height:5px; width:100%; min-width:42px; margin-top:3px; }
+.source-table tbody tr:nth-child(even) { background:#edf2ec; }
+.dispute-full summary,.phase-full summary { cursor:pointer; color:#34614e; font-size:12px; font-weight:700; }
+.dispute-full p { font-size:13px; line-height:1.4; }
+@media (min-width:901px) {
+  body[data-view="roadmap"] .view-intro,body[data-view="sources"] .view-intro { padding:8px 0; }
+  body[data-view="roadmap"] .view-intro h1,body[data-view="sources"] .view-intro h1 { font-size:34px; }
+  body[data-view="roadmap"] .route-layout { display:block; }
+  body[data-view="roadmap"] .phases { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); align-items:stretch; gap:8px; }
+  body[data-view="roadmap"] .phase { padding:9px; grid-column:auto; }
+  body[data-view="roadmap"] .phase:last-child > div { display:block; columns:auto; }
+  body[data-view="roadmap"] .phase-marker { float:none; width:auto; height:auto; display:block; border:0; margin:0 0 5px; text-align:left; font:700 36px/1 var(--sans); color:#35745a; }
+  body[data-view="roadmap"] .phase .eyebrow { font-size:10px; min-height:27px; }
+  body[data-view="roadmap"] .phase h2 { min-height:48px; margin:2px 0 8px; font:700 22px/1.05 var(--serif); }
+  body[data-view="roadmap"] .phase-copy { font-size:12px; line-height:1.3; margin-bottom:7px; }
+  body[data-view="roadmap"] .phase-copy .source-link { font-size:10px; }
+  body[data-view="roadmap"] .route-sidebar { display:grid; grid-template-columns:1fr 1.35fr; gap:10px; margin-top:10px; align-items:start; }
+  body[data-view="roadmap"] .route-audit { padding:10px; }
+  body[data-view="roadmap"] .route-audit h2 { font:700 26px/1.1 var(--serif); }
+  body[data-view="roadmap"] .route-audit > p { font-size:12px; }
+  body[data-view="roadmap"] .thresholds th,body[data-view="roadmap"] .thresholds td { padding:3px 6px; font-size:12px; }
+  body[data-view="sources"] .sources-layout { grid-template-columns:1.1fr 1fr; }
+  body[data-view="sources"] .source-ledger { max-height:none; }
+  body[data-view="sources"] .source-table th { font-size:11px; letter-spacing:0; }
+  body[data-view="sources"] .source-table td { padding:5px 7px; font-size:12px; }
+  body[data-view="sources"] .source-table .source-link { font-size:13px; }
+  body[data-view="sources"] .source-table td:first-child { min-width:0; width:32%; }
+  body[data-view="sources"] .disputes { gap:8px; }
+  body[data-view="sources"] .disputes > h2 { font-size:25px; }
+  body[data-view="sources"] .dispute-note h3 { font-size:17px; }
+  body[data-view="sources"] .dispute-comparison { gap:6px; margin:7px 0; }
+  body[data-view="sources"] .dispute-comparison > div { padding:7px; }
+  body[data-view="sources"] .dispute-comparison b { font-size:40px; line-height:1; }
+  body[data-view="sources"] .dispute-comparison span { font-size:12px; }
+  body[data-view="sources"] .dispute-comparison strong { font-size:11px; }
+  body[data-view="sources"] .dispute-comparison .source-link { font-size:10px; }
+}
+@media (min-width:901px) {
+  body[data-view="roadmap"] .phase h2 { min-height:45px; font-size:21px; }
+  body[data-view="roadmap"] .phase .eyebrow { min-height:25px; }
+  body[data-view="roadmap"] .phase-copy { font-size:12px; line-height:1.25; }
+  body[data-view="roadmap"] .phase-marker { font-size:32px; }
+  body[data-view="roadmap"] .route-audit h2 { font-size:24px; }
+  body[data-view="roadmap"] .audit-line { margin:4px 0; padding:3px; }
+  body[data-view="sources"] .source-table td { padding:4px 7px; line-height:1.2; }
+  body[data-view="sources"] .source-table td:nth-child(2) { font-size:11px; white-space:nowrap; }
+  body[data-view="sources"] .source-table .source-link { font-size:12px; white-space:nowrap; }
+  body[data-view="sources"] .source-table th { padding-block:6px; }
+}
+@media (min-width:901px) {
+  body[data-view="roadmap"] .phase-marker { float:left; margin:0 6px 4px 0; }
+  body[data-view="roadmap"] .phase .eyebrow { min-height:36px; padding-top:2px; }
+  body[data-view="roadmap"] .phase h2 { clear:both; }
+  body[data-view="roadmap"] .thresholds th,body[data-view="roadmap"] .thresholds td { padding:2px 6px; font-size:11px; line-height:1.2; }
+  body[data-view="roadmap"] .thresholds caption { padding-bottom:5px; font-size:12px; }
+}
+@media (min-width:901px) {
+  body[data-view="sources"] .source-coverage { white-space:nowrap; }
+  body[data-view="sources"] .source-coverage span { display:inline-block; width:19px; }
+  body[data-view="sources"] .source-coverage progress { display:inline-block; vertical-align:middle; width:42px; height:4px; margin:0; }
+}

@@ -410,23 +410,50 @@ function viewIntro(kicker, title, subtitle) {
   header.append(el('p','eyebrow',kicker),el('h1','',title),el('p','',subtitle));
   return header;
 }
+function evidenceMetrics(items) {
+  const strip = el('section', 'evidence-metrics');
+  for (const [number, label] of items) {
+    const tile = el('div');
+    tile.append(el('b', '', number), el('span', '', label));
+    strip.append(tile);
+  }
+  return strip;
+}
 function renderRoadmap() {
   const view = $('#roadmap-view');
   view.replaceChildren(viewIntro('GTA VI · PlayStation 5', 'Platinum route', 'Five phases from Chapter 1 to 100%. Keep manual saves: the mission guide reports no mission replay.'));
   const layout = el('div','route-layout');
   const phases = el('div','phases');
-  for (const phase of data.roadmap) {
+  const phaseTitles = ['Save first', 'Build counters', 'Vice City strands', 'Vaults & story', 'Earn platinum'];
+  const highlights = [
+    ['Keep a Chapter 1 save and take Lucia’s balcony invitation. Its trophy requirement is unconfirmed.', 'Finish Gone Fishing, then advance to Chapter 2.'],
+    ['Try all 9 activities for Master of None.', 'Finish Bret’s hunt, Cal’s fishing challenge and Billy’s dirt-bike strand.'],
+    ['After Key Cloner, start Andy, Randy, Yasmani and Tyrone’s jobs.', 'Track 8 qualifying Stranger strands; verify each in the trophy counter.'],
+    ['Escape 5 vaults for the trophy; clear all 8 for 100%.', 'Finish VCIA Takedown, Operation Savage Glory and The End of the Road.'],
+    ['100%: 42 range golds, 42 drone trials, 39 gang operations and 15 Target Decks.', 'Confirm 100% and all 54 other PS5 trophies for Vice Got a Price!.'],
+  ];
+  for (const [index, phase] of data.roadmap.entries()) {
     const card = el('article',`phase phase-${phase.stage}`);
     const marker = el('span','phase-marker',phase.stage);
     const copy = el('div');
     const window = state.hideStory ? phase.window.split(' · ')[0] : phase.window;
-    copy.append(el('p','eyebrow',window),el('h2','',phase.title));
-    for (const step of phase.steps) {
+    copy.append(el('p','eyebrow',window),el('h2','',phaseTitles[index]));
+    const visibleSteps = index === 3 ? [0, 2] : index === 4 ? [1, 3] : [0, 1];
+    const full = el('details', 'phase-full');
+    full.append(el('summary', '', 'Full phase guide'));
+    for (const [stepIndex, step] of phase.steps.entries()) {
       if (state.hideStory && step.storySpoiler) continue;
       const p=el('p','phase-copy',step.text);
       p.append(document.createTextNode(' '),cite(step.sources,true));
-      copy.append(p);
+      if (visibleSteps.includes(stepIndex)) {
+        p.firstChild.textContent = highlights[index][visibleSteps.indexOf(stepIndex)] + ' ';
+        copy.append(p);
+      }
+      const complete = el('p', 'phase-copy', step.text);
+      complete.append(document.createTextNode(' '), cite(step.sources, true));
+      full.append(complete);
     }
+    copy.append(full);
     card.append(marker,copy);
     phases.append(card);
   }
@@ -438,10 +465,12 @@ function renderRoadmap() {
   audit.append(el('p','',state.hideStory ? 'Accept the Chapter 1 invitation and keep a manual save. Sources report that the invitation disappears.' : 'Accept Lucia’s Chapter 1 balcony invitation after Down to Earth. Keep a save before the invitation disappears.'));
   audit.append(cite(['keen','gtabase-list']));
   audit.append(el('b','audit-line','Trophy dependency unconfirmed'));
-  audit.append(el('p','','The mission guide separates chapter-limited side jobs from trophies and 100% completion.'));
-  audit.append(cite(['gtabase-missions','gtabase-100']));
+  const auditDetails = el('details', 'phase-full');
+  auditDetails.append(el('summary', '', 'Side jobs and trophy lockouts'));
+  auditDetails.append(el('p','','The mission guide separates chapter-limited side jobs from trophies and 100% completion.'));
+  auditDetails.append(cite(['gtabase-missions','gtabase-100']));
+  audit.append(auditDetails);
   sidebar.append(audit,thresholdTable());
-  sidebar.append(callout('Eight Stranger strands', 'Track these separately. Sources disagree on whether their tasks also count toward 100%.', ['gtabase-100','gtabase-list'], 'dispute'));
   layout.append(sidebar);
   view.append(layout);
 }
@@ -449,7 +478,13 @@ function renderSources() {
   const view=$('#sources-view');
   const checked = new Date(`${data.audit.lastChecked}T12:00:00Z`);
   const checkedLabel = new Intl.DateTimeFormat('en-GB', {dateStyle:'long',timeZone:'UTC'}).format(checked);
-  view.replaceChildren(viewIntro(`Evidence checked ${checkedLabel}`,'Source matrix', 'Exophase and GTABase agree on the 55 official PlayStation names, descriptions and grades.'));
+  view.replaceChildren(viewIntro(`Evidence checked ${checkedLabel}`,'Source matrix', 'Exophase and GTABase agree on all 55 official names, descriptions and grades.'));
+  view.append(evidenceMetrics([
+    ['55/55', 'Trophies sourced'],
+    [String(data.sources.length), 'Source pages'],
+    [String(trophies.reduce((sum, trophy) => sum + trophy.steps.length, 0)), 'Cited steps'],
+    [String(data.disputes.length), 'Evidence notes'],
+  ]));
   const layout=el('div','sources-layout');
   const ledger=el('section','source-ledger');
   const table=el('table','source-table');
@@ -464,8 +499,14 @@ function renderSources() {
   const body=el('tbody');
   for(const source of data.sources) {
     const row=el('tr');const identity=el('td');
-    identity.append(sourceLink(source.id),el('p','',source.title));
-    row.append(identity,el('td','',source.role),el('td','',String(source.guidesCiting)),el('td','',String(source.stepsCiting)));
+    identity.append(sourceLink(source.id));
+    const coverage = el('td', 'source-coverage');
+    const meter = el('progress');
+    meter.max = trophies.length;
+    meter.value = source.guidesCiting;
+    meter.setAttribute('aria-label', `${source.name}: ${source.guidesCiting} guides`);
+    coverage.append(el('span', '', String(source.guidesCiting)), meter);
+    row.append(identity,el('td','',source.role),coverage,el('td','',String(source.stepsCiting)));
     body.append(row);
   }
   table.append(body);ledger.append(table);
@@ -474,18 +515,23 @@ function renderSources() {
   notes.append(el('h2','','Notes & source disputes'));
   const featuredFirst = [...data.disputes].sort((a, b) => Number(Boolean(b.comparison)) - Number(Boolean(a.comparison)));
   for (const note of featuredFirst) {
-    const card=el('article','dispute-note');
+    const card=el('article',`dispute-note${note.comparison ? ' featured-dispute' : ''}`);
     card.append(el('p','eyebrow',note.status),el('h3','',note.title));
     if (note.comparison) {
       const split = el('div', 'dispute-comparison');
       for (const [count, label, ids] of note.comparison) {
         const side = el('div');
-        side.append(el('b', '', count), el('span', '', label), cite(ids, true));
+        const [number, ...unit] = count.split(' ');
+        side.append(el('b', '', number), el('span', '', unit.join(' ')), el('strong', '', label), cite(ids));
         split.append(side);
       }
       card.append(split);
     }
-    card.append(el('p','',note.text),cite(note.sources));
+    if (note.comparison) {
+      const details = el('details', 'dispute-full');
+      details.append(el('summary', '', 'Read evidence & decision'), el('p', '', note.text), cite(note.sources));
+      card.append(details);
+    } else card.append(el('p','',note.text),cite(note.sources));
     notes.append(card);
   }
   layout.append(notes);view.append(layout);
