@@ -441,3 +441,30 @@ body[data-view="roadmap"] .phase h2 { font-size: 23px; }
   body[data-view="sources"] .source-coverage span { display:inline-block; width:19px; }
   body[data-view="sources"] .source-coverage progress { display:inline-block; vertical-align:middle; width:42px; height:4px; margin:0; }
 }
+@media (min-width:901px) and (max-width:1130px) {
+  .checklist-score { padding:4px 8px; }
+  .score-label b { font-size:26px; }
+  #earned-bar { height:3px; margin:3px 0; }
+  .grade-total { padding:2px 0; }
+  .grade-total b { font-size:13px; }
+  .grade-total abbr { font-size:10px; }
+  .trophy-row { min-height:35px; padding-top:3px; padding-bottom:3px; }
+  .trophy-open .row-description { font-size:11px; line-height:1.18; }
+  .trophy-open > strong { font-size:14px; line-height:1.12; }
+}
+#compact-progress { display:none; }
+@media (min-width:901px) and (max-width:1130px) {
+  body[data-view="tracker"] .audit-strip { height:43px; gap:7px; }
+  body[data-view="tracker"] .audit-strip > strong,
+  body[data-view="tracker"] .audit-strip > span:last-child { display:none; }
+  body[data-view="tracker"] #compact-progress { display:flex; align-items:center; gap:6px; padding:0; border:0; }
+  .compact-earned { display:flex; align-items:baseline; gap:5px; margin-right:5px; color:#214d3d; }
+  .compact-earned b { font-size:27px; line-height:1; }
+  .compact-earned span { font-size:10px; font-weight:700; }
+  #compact-progress .grade-total { display:flex; align-items:baseline; gap:4px; padding:4px; }
+  #compact-progress .grade-total abbr { font-size:11px; }
+  #compact-progress .grade-total b { font-size:14px; }
+  body[data-view="tracker"] .checklist-score { display:none; }
+  body[data-view="tracker"].risk-in-detail .tracker-grid { height:calc(100vh - 204px); }
+  body[data-view="tracker"] .guide-detail .repeats-step-window { display:none; }
+}

@@ -118,6 +118,10 @@ function stats() {
     return item;
   });
   $('#grade-progress').replaceChildren(...grades);
+  const compact = $('#compact-progress');
+  const total = el('div', 'compact-earned');
+  total.append(el('b', '', `${count}/${totalTrophies}`), el('span', '', 'earned'));
+  compact.replaceChildren(total, ...grades.map((item) => item.cloneNode(true)));
 }
 function selectTrophy(id, scroll = false) {
   state.focus = id;
@@ -289,7 +293,7 @@ function renderDetail(t) {
     steps.append(item);
   }
   detail.append(steps);
-  const availability = el('div', 'availability');
+  const availability = el('div', `availability${t.id === 28 ? ' repeats-step-window' : ''}`);
   availability.append(el('b', '', 'WHEN TO DO IT'), el('p', '', t.availability));
   detail.append(availability);
   if (t.id === 14) {
