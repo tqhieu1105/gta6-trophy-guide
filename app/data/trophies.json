@@ -9,7 +9,7 @@
     "gold": 2,
     "silver": 6,
     "bronze": 46,
-    "guideSteps": 202
+    "guideSteps": 144
   },
   "sources": [
     {
@@ -43,7 +43,7 @@
       "scope": "Cross-check of the full trophy list; individual unlock tips and qualification notes.",
       "readAt": "2026-11-20",
       "guidesCiting": 54,
-      "stepsCiting": 127
+      "stepsCiting": 129
     },
     {
       "id": "gtabase-missions",
@@ -131,7 +131,7 @@
       "scope": "Independent guide consulted for Chapter 1 meditation steps and unresolved triggers.",
       "readAt": "2026-11-20",
       "guidesCiting": 6,
-      "stepsCiting": 9
+      "stepsCiting": 10
     },
     {
       "id": "ign-waink",
@@ -1186,30 +1186,43 @@
       "guide": "Take Lucia’s balcony invitation before Chapter 1 closes, then aim for 18 recorded sessions. The 100% checklist asks for 15.",
       "steps": [
         {
-          "text": "After Down to Earth, return to Jason’s house the next morning. Talk to Lucia in the kitchen, then accept on the balcony.",
-          "sources": [
-            "keen",
-            "gtabase-list"
-          ]
-        },
-        {
-          "text": "Keep a Chapter 1 save. The invitation disappears later; the guides do not confirm whether this session counts as mandatory.",
-          "sources": [
-            "keen",
-            "gtabase-list"
-          ]
-        },
-        {
-          "text": "Reunite Jason and Lucia after Coffee Break (Chapter 2). A joint meditation counts twice; the last spot requires both leads.",
+          "text": "Save before the Chapter 1 balcony invitation; its trophy role is still unconfirmed.",
           "sources": [
             "gtabase-list",
-            "gtabase-missions",
             "keen"
           ]
         },
         {
-          "text": "Check Progress → Collections → Exploration → Meditations. Track 18 for the trophy and 15 for 100%.",
+          "text": "The morning after Down to Earth, return to Jason’s house.",
           "sources": [
+            "gtabase-list",
+            "keen"
+          ]
+        },
+        {
+          "text": "Speak to Lucia in the kitchen; accept her balcony meditation.",
+          "sources": [
+            "keen"
+          ]
+        },
+        {
+          "text": "After Coffee Break (Chapter 2), reunite Jason and Lucia.",
+          "sources": [
+            "gtabase-missions",
+            "gtabase-list"
+          ]
+        },
+        {
+          "text": "Use both leads at each spot: a shared session counts twice. The final spot requires both.",
+          "sources": [
+            "gtabase-list",
+            "keen"
+          ]
+        },
+        {
+          "text": "Open Progress → Collections → Exploration → Meditations. Reach 18 for the trophy; 15 for 100%.",
+          "sources": [
+            "gtabase-list",
             "gtabase-100",
             "keen"
           ]
@@ -2426,8 +2439,20 @@
       "title": "Early 100% guides disagree on counters",
       "status": "USE THE IN-GAME CHECKLIST",
       "comparison": [
-        ["100 Stick Ups", "IGN table", ["ign-100"]],
-        ["50 distinct Stick Ups", "GTABase checklist", ["gtabase-100"]]
+        [
+          "100 Stick Ups",
+          "IGN table",
+          [
+            "ign-100"
+          ]
+        ],
+        [
+          "50 distinct Stick Ups",
+          "GTABase checklist",
+          [
+            "gtabase-100"
+          ]
+        ]
       ],
       "text": "IGN’s table gives 100 Stick Ups and $100,000 Marked Bills, while GTABase lists 50 distinct Stick Ups and $250,000 Marked Bills. IGN’s prose also says all optional missions; GTABase lists 100 Optional Tasks. Follow the game’s Progress screen. Dime on the Dollar itself explicitly requires $250,000.",
       "sources": [
@@ -2440,8 +2465,21 @@
       "title": "Eighteen meditations for trophy; fifteen for 100%",
       "status": "DIFFERENT TARGETS",
       "comparison": [
-        ["18 sessions", "Trophy", ["gtabase-list", "keen"]],
-        ["15 sessions", "100% stat", ["gtabase-100"]]
+        [
+          "18 sessions",
+          "Trophy",
+          [
+            "gtabase-list",
+            "keen"
+          ]
+        ],
+        [
+          "15 sessions",
+          "100% stat",
+          [
+            "gtabase-100"
+          ]
+        ]
       ],
       "text": "The official description says every spot. GTABase and KeenGamer report 18 meditation sessions for the trophy, while the 100% list needs 15. The balcony is time-limited but its necessity remains unconfirmed. Safest route: do it in Chapter 1 and retain a save.",
       "sources": [
@@ -2455,7 +2493,7 @@
   "audit": {
     "crosscheckedNamesDescriptionsGrades": 55,
     "sources": 15,
-    "guideSteps": 142,
+    "guideSteps": 144,
     "missableCount": 1,
     "lastChecked": "2026-11-20",
     "hidden": 28,

@@ -26,6 +26,17 @@ function assertCatalogCoverage() {
       }
     }
   }
+  const steps = records.flatMap((record) => record.steps);
+  if (catalog.counts.guideSteps !== steps.length || catalog.audit.guideSteps !== steps.length) {
+    throw new Error('The guide step totals must match the catalog.');
+  }
+  for (const source of catalog.sources) {
+    const guideCount = records.filter((record) => record.steps.some((step) => step.sources.includes(source.id))).length;
+    const stepCount = steps.filter((step) => step.sources.includes(source.id)).length;
+    if (source.guidesCiting !== guideCount || source.stepsCiting !== stepCount) {
+      throw new Error(`Stale source coverage: ${source.id}`);
+    }
+  }
 }
 
 function assertCaptureManifest() {

@@ -287,19 +287,29 @@ progress::-webkit-progress-bar{background:#d8e4db}progress::-webkit-progress-val
   border: 0;
 }
 #route-progress .stage-line {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 3px 6px;
-  padding: 4px 7px;
+  gap: 1px 6px;
+  padding: 2px 7px 5px;
   background: #e5eee7;
   border: 1px solid #b7ccc0;
   color: #254c3c;
   font-size: 12px;
 }
 #route-progress .stage-line:hover { background: #d0e5d8; }
-#route-progress .stage-meter {
+#route-progress .stage-name { font-weight: 700; }
+#route-progress .stage-action {
   grid-column: 1 / -1;
-  height: 4px;
+  font-size: 11px;
+  line-height: 1.1;
+}
+#route-progress .stage-precaution { background: #fff0d9; border-color: #d8a960; color: #603f1d; }
+#route-progress .stage-precaution:hover { background: #ffe2b5; }
+#route-progress .stage-meter {
+  position: absolute;
+  inset: auto 0 0;
+  height: 3px;
 }
 .rail-source > .source-link {
   font-size: 13px;
@@ -338,6 +348,8 @@ progress::-webkit-progress-bar{background:#d8e4db}progress::-webkit-progress-val
 .meditation-target span { font-size: 12px; }
 .meditation-target > .citations { grid-column: 2; }
 .meditation-target + .meditation-target { margin-top: 5px; }
+.meditation-evidence { margin: 8px 0 0; font-size: 11px; line-height: 1.3; color: #324e43; }
+.guide-source-key { display: none; }
 .dispute-comparison {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -467,4 +479,63 @@ body[data-view="roadmap"] .phase h2 { font-size: 23px; }
   body[data-view="tracker"] .checklist-score { display:none; }
   body[data-view="tracker"].risk-in-detail .tracker-grid { height:calc(100vh - 204px); }
   body[data-view="tracker"] .guide-detail .repeats-step-window { display:none; }
+}
+@media (min-width:1000px) and (max-width:1130px) {
+  body[data-view="tracker"] .tracker-grid,
+  body[data-view="tracker"].risk-in-detail .tracker-grid {
+    grid-template-columns: 396px minmax(0, 1fr) 122px;
+  }
+  .trophy-list {
+    display: block;
+  }
+  .phase-trophies { column-count: 2; column-gap: 0; }
+  .trophy-list .checklist-phase { grid-column: 1 / -1; }
+  .trophy-row {
+    break-inside: avoid;
+    gap: 3px;
+    padding: 3px 4px;
+    grid-template-columns: 15px minmax(0, 1fr);
+    border-inline-end: 1px solid #dee5df;
+  }
+  .trophy-row.selected { padding-inline-start: 2px; }
+  .trophy-open { align-content: start; }
+  .trophy-open > strong { font-size: 13px; }
+  .trophy-open > .grade { min-width: 0; padding: 0 2px; letter-spacing: 0; }
+  .trophy-open .row-description { line-height: 1.1; }
+  .trophy-masked .trophy-open > strong { font-size: 12px; }
+  .trophy-row.selected .row-meta { align-items: start; }
+  .trophy-row.selected .row-meta .risk-label { line-height: 1.1; padding: 1px 2px; }
+  .trophy-list .checklist-phase { padding-block: 2px; }
+  .checklist .list-foot { height: 17px; min-height: 17px; }
+  .evidence-rail .panel-heading { padding-inline: 0; }
+  .evidence-rail .panel-heading span { display: none; }
+  body[data-view="tracker"].risk-in-detail .tracker-grid { height: calc(100vh - 199px); }
+  .risk-in-detail .guide-detail .official { padding-block: 3px; }
+  .risk-in-detail .guide-detail .callout { margin-block: 3px; padding-block: 3px; }
+  .guide-detail .guide-steps p { line-height: 1.2; }
+  .guide-detail .guide-steps li { padding-block: 3px; }
+}
+@media (min-width:1000px) and (max-width:1130px) {
+  body[data-view="tracker"] .tracker-grid,
+  body[data-view="tracker"].risk-in-detail .tracker-grid {
+    grid-template-columns: 44% minmax(0, 1fr);
+  }
+  body[data-view="tracker"] .evidence-rail { display: none; }
+  .trophy-open > strong { font-size: 14px; }
+  .trophy-open .row-description { font-size: 12px; }
+  .guide-detail .guide-steps p { font-size: 15px; line-height: 1.2; }
+  .guide-detail .guide-steps li { padding-block: 3px; }
+  .guide-detail .detail-title { font-size: 32px; }
+  .guide-detail .manual-counter { margin-block: 3px; padding-block: 2px; }
+  .guide-source-key { display: block; margin: 5px 0 0; font-size: 11px; line-height: 1.3; }
+  .guide-source-key .source-link { font-size: 11px; white-space: nowrap; }
+  .risk-in-detail .guide-detail { display: flex; flex-direction: column; }
+  .risk-in-detail .guide-detail .detail-meta { order: -2; margin: 0 100px -17px 0; min-height: 17px; }
+  .risk-in-detail .guide-detail .detail-meta .risk-label { display: none; }
+  .risk-in-detail .guide-detail .detail-top { order: -1; align-self: flex-end; min-height: 17px; margin-bottom: 0; }
+  .risk-in-detail .guide-detail .detail-top .eyebrow { display: none; }
+  .risk-in-detail .guide-detail .callout { font-size: 11px; line-height: 1.25; }
+  .risk-in-detail .guide-detail .callout b,
+  .risk-in-detail .guide-detail .callout p { display: inline; font-size: 11px; }
+  .risk-in-detail .guide-detail .callout b::after { content: " · "; }
 }

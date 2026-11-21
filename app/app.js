@@ -11,11 +11,11 @@ const trophies = data.trophies;
 const byId = new Map(trophies.map((t) => [t.id, t]));
 const sourceIndex = new Map(data.sources.map((s, i) => [s.id, { ...s, number: i + 1 }]));
 const routePhases = [
-  { title: 'Chapters 1–2', chapters: [1, 2], note: 'Protect the balcony invitation' },
+  { title: 'Chapters 1–2', chapters: [1, 2], note: 'Save before the balcony' },
   { title: 'Chapter 3', chapters: [3], note: 'Side strands & collections' },
-  { title: 'Chapter 4', chapters: [4], note: 'Vault route & shooting range' },
-  { title: 'Chapter 5', chapters: [5], note: 'Finish the story, keep saves' },
-  { title: 'Free roam & 100%', chapters: [0], note: 'Finish counts, then platinum' },
+  { title: 'Chapter 4', chapters: [4], note: 'Vault route & range' },
+  { title: 'Chapter 5', chapters: [5], note: 'Finish story, keep saves' },
+  { title: 'Free roam & 100%', chapters: [0], note: 'Finish counts for platinum' },
 ];
 const routePosition = (trophy) => routePhases.findIndex((phase) => phase.chapters.includes(trophy.chapter));
 const routeOrder = (trophy) => trophy.id === 28 ? 3.5 : trophy.id;
@@ -212,6 +212,7 @@ function trophyRow(t) {
 function renderRows(list, visible) {
   const fragment = document.createDocumentFragment();
   let lastPhase = -1;
+  let cards;
   for (const trophy of visible) {
     const phase = routePosition(trophy);
     if (phase !== lastPhase) {
@@ -219,10 +220,13 @@ function renderRows(list, visible) {
       const earned = matches.filter((item) => state.earned.has(item.name)).length;
       const band = el('h3', 'checklist-phase');
       band.append(el('span', '', routePhases[phase].title), el('span', '', `${earned}/${matches.length} earned`));
-      fragment.append(band);
+      const group = el('section', 'checklist-phase-group');
+      cards = el('div', 'phase-trophies');
+      group.append(band, cards);
+      fragment.append(group);
       lastPhase = phase;
     }
-    fragment.append(trophyRow(trophy));
+    cards.append(trophyRow(trophy));
   }
   list.replaceChildren(fragment);
 }
@@ -276,7 +280,7 @@ function renderDetail(t) {
     return;
   }
   if (t.id === 28) {
-    detail.append(callout('Possible missable · Chapter 1', 'Save before Lucia’s invitation; a required session is unconfirmed.', ['gtabase-list','keen'], 'dispute'));
+    detail.append(callout('Possible missable · Chapter 1', 'Save first: the balcony requirement is unconfirmed.', ['gtabase-list','keen'], 'dispute'));
   } else if (t.evidence === 'unresolved') {
     detail.append(callout('UNCONFIRMED TRIGGER · DO NOT GRIND A GUESS', t.guide, ['gtabase-list','keen'], 'dispute'));
   } else detail.append(el('p', 'guide-summary', t.guide));
@@ -293,6 +297,13 @@ function renderDetail(t) {
     steps.append(item);
   }
   detail.append(steps);
+  const sourceKey = el('p', 'guide-source-key');
+  sourceKey.append(el('b', '', 'Step sources: '));
+  const linkedSources = new Set(t.steps.flatMap((step) => step.sources));
+  for (const id of linkedSources) {
+    sourceKey.append(sourceLink(id), document.createTextNode(' · '));
+  }
+  detail.append(sourceKey);
   const availability = el('div', `availability${t.id === 28 ? ' repeats-step-window' : ''}`);
   availability.append(el('b', '', 'WHEN TO DO IT'), el('p', '', t.availability));
   detail.append(availability);
@@ -308,9 +319,9 @@ function renderRouteProgress() {
   for (const [index, { title: label, chapters, note }] of routePhases.entries()) {
     const members = trophies.filter((item) => chapters.includes(item.chapter));
     const earned = members.filter((item) => state.earned.has(item.name)).length;
-    const line = button('', () => setView('roadmap'), 'stage-line');
+    const line = button('', () => setView('roadmap'), index === 0 ? 'stage-line stage-precaution' : 'stage-line');
     line.append(el('span', 'stage-name', label), el('b', '', `${earned}/${members.length}`));
-    line.title = `Phase ${index + 1} · ${note}`;
+    line.append(el('span', 'stage-action', note));
     const meter = el('progress', 'stage-meter');
     meter.max = members.length;
     meter.value = earned;
@@ -340,6 +351,9 @@ function renderRail(t) {
       target.append(el('b', '', count), el('span', '', label), cite(ids, true));
       split.append(target);
     }
+    const balcony = el('p', 'meditation-evidence', 'GTABase and KeenGamer leave the balcony requirement unconfirmed. ');
+    balcony.append(cite(['gtabase-list', 'keen'], true));
+    split.append(balcony);
     rail.append(split);
   }
   const linked = [...new Set(['playstation', 'exophase', ...t.steps.flatMap((s) => s.sources)])];
